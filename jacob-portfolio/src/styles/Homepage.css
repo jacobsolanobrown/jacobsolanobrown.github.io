@@ -200,9 +200,10 @@ svg {
   position: absolute;
   background: radial-gradient(
       circle at center,
-      rgba(var(--color1), 0.8) 0,
-      rgba(var(--color1), 0) 50%
+      rgba(var(--color6), 0.8) 0,
+      rgba(var(--color6), 0) 50%
     )
+    /* TODO: add a more harsh noise - try to match with the figma design  */
     no-repeat;
   mix-blend-mode: var(--blending);
 
