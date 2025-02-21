@@ -34,6 +34,21 @@ const Homepage: React.FC = () => {
 
   return (
     <div>
+      <svg>
+        <filter id="grainy">
+          {/* <feTurbulence type="turbulence" baseFrequency="0.6" /> */}
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.8"
+            numOctaves="4"
+            stitchTiles="stitch"
+          />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.3 0"
+          />
+        </filter>
+      </svg>
       <header>
         <h1>Jacob Solano</h1>
       </header>
