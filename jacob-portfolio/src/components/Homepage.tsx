@@ -13,11 +13,7 @@ const Homepage: React.FC = () => {
                 </section>
                 <section>
                     <h2>Projects</h2>
-                    <ul>
-                        <li>Project 1</li>
-                        <li>Project 2</li>
-                        <li>Project 3</li>
-                    </ul>
+                    <h3>Nothing here yet...</h3>
                 </section>
                 <section>
                     <h2>Contact</h2>
