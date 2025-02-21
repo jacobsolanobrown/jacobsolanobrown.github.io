@@ -1,4 +1,6 @@
 import React from 'react';
+import '../styles/Homepage.css';
+
 
 const Homepage: React.FC = () => {
     return (
