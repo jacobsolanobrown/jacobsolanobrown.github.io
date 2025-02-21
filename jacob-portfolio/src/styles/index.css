@@ -1,14 +1,16 @@
 :root {
-  font-family: Clash Grotesk;
+  /* font-family: Clash Grotesk; */
+  font-family: Helvetica, sans-serif;
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0;
 }
 
-body {
-  margin: 0;
-}
+/* gets rid of preset margin and padding */
 
+* {
+  margin: 0;
+  padding: 0;
+}

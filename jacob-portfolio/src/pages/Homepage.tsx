@@ -1,32 +1,99 @@
-import React from 'react';
-import '../styles/Homepage.css';
-
+import React from "react";
+import { useEffect } from "react";
+import "../styles/Homepage.css";
 
 const Homepage: React.FC = () => {
-    return (
-        <div>
-            <header>
-                <h1>Welcome to My Portfolio</h1>
-            </header>
-            <main>
-                <section>
-                    <h2>About Me</h2>
-                    <p>Hi, I'm Jacob Solano, a fullstack developer currently studying at Brown University.</p>
-                </section>
-                <section>
-                    <h2>Projects</h2>
-                    <h3>Nothing here yet...</h3>
-                </section>
-                <section>
-                    <h2>Contact</h2>
-                    <p>You can reach me at <a href="mailto:gilbert_solano@brown.edu">gilbert_solano@brown.edu</a></p>
-                </section>
-            </main>
-            <footer>
-                <p>&copy; 2025 Jacob Solano</p>
-            </footer>
-        </div>
-    );
+  useEffect(() => {
+    const mouseBubble = document.querySelector<HTMLDivElement>(".interaction")!;
+    let curX = 0;
+    let curY = 0;
+    let tgX = 0;
+    let tgY = 0;
+
+    function move() {
+      curX += (tgX - curX) / 20;
+      curY += (tgY - curY) / 20;
+      mouseBubble.style.transform = `translate(${Math.round(
+        curX
+      )}px, ${Math.round(curY)}px)`;
+      requestAnimationFrame(move);
+    }
+
+    const handleMouseMove = (event: MouseEvent) => {
+      tgX = event.clientX;
+      tgY = event.clientY;
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    move();
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  return (
+    <div>
+      <header>
+        <h1>Jacob Solano</h1>
+      </header>
+      <main>
+        <section className="about-section">
+          <div className="about-text">
+            <h2>About Me</h2>
+            <p>
+              Hi, I'm Jacob Solano, a fullstack developer currently studying at
+              Brown University.
+            </p>
+          </div>
+          <div className="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur
+                    in="SourceGraphic"
+                    stdDeviation="10"
+                    result="blur"
+                  />
+                  <feColorMatrix
+                    in="blur"
+                    mode="matrix"
+                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                    result="goo"
+                  />
+                  <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+              </defs>
+            </svg>
+            <div className="gradient-container">
+              <div className="g1"></div>
+              <div className="g2"></div>
+              <div className="g3"></div>
+              <div className="g4"></div>
+              <div className="g5"></div>
+              <div className="interaction"></div>
+            </div>
+          </div>
+        </section>
+        <section className="project-section">
+          <h2>Projects</h2>
+          <h3>Nothing here yet...</h3>
+        </section>
+        <section className="contact-section">
+          <h2>Contact</h2>
+          <p>
+            You can reach me at{" "}
+            <a href="mailto:gilbert_solano@brown.edu">
+              gilbert_solano@brown.edu
+            </a>
+          </p>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2025 Jacob Solano</p>
+      </footer>
+    </div>
+  );
 };
 
 export default Homepage;
