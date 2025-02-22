@@ -64,9 +64,9 @@ const Homepage: React.FC = () => {
           />
         </filter>
       </svg>
-      {/* <header>
+      <header>
         <h1>Jacob Solano</h1>
-      </header> */}
+      </header>
       <main>
         <section className="about-section">
           <div className="about-text">
