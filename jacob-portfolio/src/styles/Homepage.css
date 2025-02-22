@@ -60,7 +60,7 @@ footer {
   --color6: 18, 113, 255;
   --color-interactive: 255, 255, 255;
   --color-interactive1: 140, 100, 255;
-  --circle-size: 100%;
+  --circle-size: 90%;
   --blending: hard-light;
 }
 
@@ -138,52 +138,52 @@ svg {
 }
 
 .g1 {
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
+  /* top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2); */
   animation: moveVertical 20s ease infinite;
 }
 
 .g2 {
-  top: calc(50% - var(--circle-size) / 2);
-  right: calc(50% - var(--circle-size) / 2);
+  /* top: calc(50% - var(--circle-size) / 2);
+  right: calc(50% - var(--circle-size) / 2); */
   transform-origin: calc(50% - 400px);
   animation: moveInCircle 30s reverse infinite;
 }
 
 .g3 {
-  top: calc(50% - var(--circle-size) / 2 + 200px);
-  left: calc(50% - var(--circle-size) / 2 - 500px);
+  /* top: calc(50% - var(--circle-size) / 2 + 200px);
+  left: calc(50% - var(--circle-size) / 2 - 500px); */
   transform-origin: calc(50% + 400px);
   animation: moveInCircle 10s linear infinite;
 }
 
 .g4 {
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
+  /* top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2); */
   transform-origin: calc(50% - 200px);
   animation: moveHorizontal 20s ease infinite;
   opacity: 0.7;
 }
 
 .g5 {
-  width: calc(var(--circle-size) * 2);
-  height: calc(var(--circle-size) * 2);
-  top: calc(50% - var(--circle-size));
-  left: calc(50% - var(--circle-size));
+  /* width: calc(var(--circle-size) * 2);
+  height: calc(var(--circle-size) * 2); */
+  /* top: calc(50% - var(--circle-size));
+  left: calc(50% - var(--circle-size)); */
   transform-origin: calc(50% - 800px) calc(50% + 200px);
   animation: moveInCircle 40s ease infinite;
 }
 
 .g6 {
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2 + 900px);
+  /* top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2 + 900px); */
   transform-origin: calc(50% - 600px);
   animation: moveInCircle 10s linear infinite;
 }
 
 .g7 {
-  top: calc(50% - var(--circle-size) / 2 + 300px);
-  left: calc(50% - var(--circle-size) / 2 - 700px);
+  /* top: calc(50% - var(--circle-size) / 2 + 300px);
+  left: calc(50% - var(--circle-size) / 2 - 700px); */
   transform-origin: calc(50% - 700px);
   animation: moveInCircle 20s linear infinite;
 }

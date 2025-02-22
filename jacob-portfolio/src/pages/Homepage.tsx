@@ -10,15 +10,15 @@ const Homepage: React.FC = () => {
     let tgX = 0;
     let tgY = 0;
 
+    // logic for making the gradient move with the mouse 
     function move() {
       curX += (tgX - curX) / 20;
       curY += (tgY - curY) / 20;
-      mouseBubble.style.transform = `translate(${Math.round(
-        curX
-      )}px, ${Math.round(curY)}px)`;
+      mouseBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
       requestAnimationFrame(move);
     }
 
+    // handler for getting the mouse's positions 
     const handleMouseMove = (event: MouseEvent) => {
       tgX = event.clientX;
       tgY = event.clientY;
@@ -33,8 +33,10 @@ const Homepage: React.FC = () => {
     );
 
     gradients.forEach((gradient) => {
-      const randomTop = Math.random() * 100;
-      const randomLeft = Math.random() * 100;
+        // This randomizes their postions 
+      const randomTop = Math.random() * 50; 
+      const randomLeft = Math.random() * 60; // Keep it between 20% and 80%
+
       gradient.style.top = `${randomTop}%`;
       gradient.style.left = `${randomLeft}%`;
     });
