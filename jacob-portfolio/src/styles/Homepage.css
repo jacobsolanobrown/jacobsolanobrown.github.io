@@ -11,17 +11,14 @@ footer {
 }
 
 .about-section {
-  /* background: blue; */
-  /* background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));  */
-  background: linear-gradient(40deg, blue, aliceblue);
-
+  background: linear-gradient(40deg, blue, rgb(190, 190, 237));
+  background-image: filter("../assets/noise.svg");
   text-align: center;
   height: 100vh;
   max-width: 100vw;
 }
 
 .about-text {
-  /* brings text to the front  */
   z-index: 100;
   width: 100%;
   height: 100%;
@@ -67,7 +64,6 @@ footer {
   --blending: hard-light;
 }
 
-/* makes the padding not add on to the side of the page  */
 * {
   box-sizing: border-box;
 }
@@ -115,8 +111,6 @@ footer {
   width: 100%;
   position: absolute;
   overflow: hidden;
-  /* background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2)); */
-  background-image: url(../assets/noise.svg);
 }
 
 .gradient-container {
@@ -129,121 +123,73 @@ svg {
   display: none;
 }
 
-.g1 {
+.g1, .g2, .g3, .g4, .g5, .g6, .g7 {
   position: absolute;
   background: radial-gradient(
       circle at center,
-      rgba(var(--color2), 0.8) 0,
-      rgba(var(--color2), 0) 65%
+      rgba(255, 255, 255, 0.8) 0,
+      rgba(0,0,0, 0) 65%
     )
     no-repeat;
-
+  mix-blend-mode: var(--blending);
   width: var(--circle-size);
   height: var(--circle-size);
+  opacity: 1;
+}
+
+.g1 {
   top: calc(50% - var(--circle-size) / 2);
   left: calc(50% - var(--circle-size) / 2);
-
-  mix-blend-mode: var(--blending);
-
-  transform-origin: center center;
-  /* moves vertically  */
-  animation: moveVertical 30s ease infinite;
-
-  opacity: 1;
+  animation: moveVertical 20s ease infinite;
 }
 
 .g2 {
-  position: absolute;
-  background: radial-gradient(
-      circle at center,
-      rgba(var(--color1), 0.8) 0,
-      rgba(var(--color1), 0) 50%
-    )
-    no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: var(--circle-size);
-  height: var(--circle-size);
   top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
-
+  right: calc(50% - var(--circle-size) / 2);
   transform-origin: calc(50% - 400px);
-  /* moves in circle */
-  animation: moveInCircle 20s reverse infinite;
-
-  opacity: 1;
+  animation: moveInCircle 30s reverse infinite;
 }
 
 .g3 {
-  position: absolute;
-  background: radial-gradient(
-      circle at center,
-      rgba(var(--color1), 0.8) 0,
-      rgba(var(--color1), 0) 50%
-    )
-    no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: var(--circle-size);
-  height: var(--circle-size);
   top: calc(50% - var(--circle-size) / 2 + 200px);
   left: calc(50% - var(--circle-size) / 2 - 500px);
-
   transform-origin: calc(50% + 400px);
-  /* moves in circle -- animation loops  */
-  animation: moveInCircle 40s linear infinite;
-
-  opacity: 1;
+  animation: moveInCircle 10s linear infinite;
 }
 
 .g4 {
-  position: absolute;
-  background: radial-gradient(
-      circle at center,
-      rgba(var(--color6), 0.8) 0,
-      rgba(var(--color6), 0) 50%
-    )
-    /* TODO: add a more harsh noise - try to match with the figma design  */
-    no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: var(--circle-size);
-  height: var(--circle-size);
   top: calc(50% - var(--circle-size) / 2);
   left: calc(50% - var(--circle-size) / 2);
-
   transform-origin: calc(50% - 200px);
-  /* moves horizontal */
-  animation: moveHorizontal 40s ease infinite;
-
+  animation: moveHorizontal 20s ease infinite;
   opacity: 0.7;
 }
 
 .g5 {
-  position: absolute;
-  background: radial-gradient(
-      circle at center,
-      rgba(var(--color1), 0.8) 0,
-      rgba(var(--color1), 0) 50%
-    )
-    no-repeat;
-  mix-blend-mode: var(--blending);
-
   width: calc(var(--circle-size) * 2);
   height: calc(var(--circle-size) * 2);
   top: calc(50% - var(--circle-size));
   left: calc(50% - var(--circle-size));
-
   transform-origin: calc(50% - 800px) calc(50% + 200px);
-  /* moves in circles  */
-  animation: moveInCircle 20s ease infinite;
+  animation: moveInCircle 40s ease infinite;
+}
 
-  opacity: 1;
+.g6 {
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2 + 900px);
+  transform-origin: calc(50% - 600px);
+  animation: moveInCircle 10s linear infinite;
+}
+
+.g7 {
+  top: calc(50% - var(--circle-size) / 2 + 300px);
+  left: calc(50% - var(--circle-size) / 2 - 700px);
+  transform-origin: calc(50% - 700px);
+  animation: moveInCircle 20s linear infinite;
 }
 
 .interaction {
   position: absolute;
-  /* we have a set color for the interactive gradient  - same logic as other gradients */
   background: radial-gradient(
       circle at center,
       rgba(var(--color-interactive), 0.8) 0,
@@ -251,11 +197,9 @@ svg {
     )
     no-repeat;
   mix-blend-mode: var(--blending);
-
   width: 100%;
   height: 100%;
   top: -50%;
   left: -50%;
-
   opacity: 0.7;
 }

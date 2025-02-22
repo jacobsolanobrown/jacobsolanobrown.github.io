@@ -26,6 +26,19 @@ const Homepage: React.FC = () => {
 
     window.addEventListener("mousemove", handleMouseMove);
     move();
+
+    // Randomize gradient positions, excluding the .interaction element
+    const gradients = document.querySelectorAll<HTMLDivElement>(
+      ".gradient-container > div:not(.interaction)"
+    );
+
+    gradients.forEach((gradient) => {
+      const randomTop = Math.random() * 100;
+      const randomLeft = Math.random() * 100;
+      gradient.style.top = `${randomTop}%`;
+      gradient.style.left = `${randomLeft}%`;
+    });
+
     // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -49,9 +62,9 @@ const Homepage: React.FC = () => {
           />
         </filter>
       </svg>
-      <header>
+      {/* <header>
         <h1>Jacob Solano</h1>
-      </header>
+      </header> */}
       <main>
         <section className="about-section">
           <div className="about-text">
@@ -86,6 +99,8 @@ const Homepage: React.FC = () => {
               <div className="g3"></div>
               <div className="g4"></div>
               <div className="g5"></div>
+              <div className="g6"></div>
+              <div className="g7"></div>
               <div className="interaction"></div>
             </div>
           </div>
