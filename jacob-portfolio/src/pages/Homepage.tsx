@@ -68,19 +68,21 @@ const Homepage: React.FC = () => {
           />
         </filter>
       </svg>
-      <header>
+      {/* <header>
         <h1>Jacob Solano</h1>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-      </header>
+      </header> */}
       <main>
         <section className="about-section">
           <div className="about-box">
             <div className="about-text">
-              <p>hi i am</p>
-              <h1>jacob solano</h1>
+              <p>Hi i am</p>
+              <h1>jacob solano,</h1>
               <p>
-                a fullstack developer currently studying at Brown University.
+                a fullstack developer currently studying at Brown University, <br />
+                and I like cats,
+                among other things.
               </p>
             </div>
             <img
