@@ -77,12 +77,11 @@ const Homepage: React.FC = () => {
         <section className="about-section">
           <div className="about-box">
             <div className="about-text">
-              <p>Hi i am</p>
+              <p>hi i am</p>
               <h1>jacob solano,</h1>
               <p>
-                a fullstack developer currently studying at Brown University, <br />
-                and I like cats,
-                among other things.
+                a fullstack developer currently at brown, <br />
+                and i like cats, among other things
               </p>
             </div>
             <img
@@ -91,7 +90,13 @@ const Homepage: React.FC = () => {
               style={{ width: "300px", height: "auto" }}
             />
           </div>
-
+          <div className="nav-box">
+            <div className="nav-links">
+              <a href="#about-me">about</a>
+              <a href="#projects">projects</a>
+              <a href="#contact">contact</a>
+            </div>
+          </div>
           <div className="gradient-bg">
             <svg xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -122,6 +127,10 @@ const Homepage: React.FC = () => {
               <div className="interaction"></div>
             </div>
           </div>
+        </section>
+        <section id="about-me" className="about-me-section">
+          <h2>About Me</h2>
+          <h3>I like cats.</h3>
         </section>
         <section id="projects" className="project-section">
           <h2>Projects</h2>
