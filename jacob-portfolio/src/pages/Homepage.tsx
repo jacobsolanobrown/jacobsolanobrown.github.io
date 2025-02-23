@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Homepage.css";
 import catImage from "../assets/cat_duotone.png";
 
@@ -69,6 +70,8 @@ const Homepage: React.FC = () => {
       </svg>
       <header>
         <h1>Jacob Solano</h1>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </header>
       <main>
         <section className="about-section">
@@ -118,11 +121,12 @@ const Homepage: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="project-section">
+        <section id="projects" className="project-section">
           <h2>Projects</h2>
           <h3>Nothing here yet...</h3>
+          <Link to="/accessiblecomponentsproject">Accessible Components</Link>
         </section>
-        <section className="contact-section">
+        <section id="contact" className="contact-section">
           <h2>Contact</h2>
           <p>
             You can reach me at{" "}

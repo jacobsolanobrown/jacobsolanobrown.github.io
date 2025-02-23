@@ -1,17 +1,20 @@
-import './styles/App.css';
-import './pages/Homepage';
-import Homepage from './pages/Homepage';
+import React from "react";
+import "./styles/App.css";
+import "./pages/Homepage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import AccessibleComponentsProject from "./pages/AccessibleComponentsProject";
 
-function App() {
-  // const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-          <Homepage />
-      </div>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/accessiblecomponentsproject" element={<AccessibleComponentsProject />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+
+export default App;
