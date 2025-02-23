@@ -274,7 +274,7 @@ svg {
 }
 
 .about-me-photo {
-  background-color: rgb(74, 63, 228);
+  background-color: rgba(0, 0, 225, 0.8);
   width: fit-content;
   height: auto;
   padding: 60px;
