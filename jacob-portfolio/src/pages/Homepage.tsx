@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import "../styles/Homepage.css";
+import catImage from "../assets/cat_duotone.png";
 
 const Homepage: React.FC = () => {
   useEffect(() => {
@@ -10,15 +11,17 @@ const Homepage: React.FC = () => {
     let tgX = 0;
     let tgY = 0;
 
-    // logic for making the gradient move with the mouse 
+    // logic for making the gradient move with the mouse
     function move() {
       curX += (tgX - curX) / 20;
       curY += (tgY - curY) / 20;
-      mouseBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+      mouseBubble.style.transform = `translate(${Math.round(
+        curX
+      )}px, ${Math.round(curY)}px)`;
       requestAnimationFrame(move);
     }
 
-    // handler for getting the mouse's positions 
+    // handler for getting the mouse's positions
     const handleMouseMove = (event: MouseEvent) => {
       tgX = event.clientX;
       tgY = event.clientY;
@@ -33,8 +36,8 @@ const Homepage: React.FC = () => {
     );
 
     gradients.forEach((gradient) => {
-        // This randomizes their postions 
-      const randomTop = Math.random() * 50; 
+      // This randomizes their postions
+      const randomTop = Math.random() * 50;
       const randomLeft = Math.random() * 60; // Keep it between 20% and 80%
 
       gradient.style.top = `${randomTop}%`;
@@ -69,13 +72,21 @@ const Homepage: React.FC = () => {
       </header>
       <main>
         <section className="about-section">
-          <div className="about-text">
-            <h2>About Me</h2>
-            <p>
-              Hi, I'm Jacob Solano, a fullstack developer currently studying at
-              Brown University.
-            </p>
+          <div className="about-box">
+            <div className="about-text">
+              <p>hi i am</p>
+              <h1>jacob solano</h1>
+              <p>
+                a fullstack developer currently studying at Brown University.
+              </p>
+            </div>
+            <img
+              src={catImage}
+              alt="A photo of my cat with a duotone black and white filter overlayed"
+              style={{ width: "300px", height: "auto" }}
+            />
           </div>
+
           <div className="gradient-bg">
             <svg xmlns="http://www.w3.org/2000/svg">
               <defs>
