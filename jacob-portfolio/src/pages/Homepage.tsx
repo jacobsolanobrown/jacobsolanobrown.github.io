@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Homepage.css";
 import catImage from "../assets/cat_duotone.png";
+import githubLogo from "../assets/githublogo.svg";
+import linkedinLogo from "../assets/linkedinlogo.svg";
 
 const Homepage: React.FC = () => {
   useEffect(() => {
@@ -74,14 +76,20 @@ const Homepage: React.FC = () => {
         <a href="#contact">Contact</a>
       </header> */}
       <main>
-        <section className="about-section">
-          <div className="about-box">
-            <div className="about-text">
+        <section className="landing-section">
+          <div className="landing-container">
+            <div className="landing-text">
               <p>hi i am</p>
-              <h1>jacob solano,</h1>
+              <h1>
+                <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
+                  jacob solano
+                </a>
+                ,
+              </h1>
               <p>
-                a fullstack developer currently at brown, <br />
-                and i like cats, among other things
+                a fullstack developer currently at brown
+                {/* <br />
+                and i like cats, among other things */}
               </p>
             </div>
             <img
@@ -129,8 +137,29 @@ const Homepage: React.FC = () => {
           </div>
         </div>
         <section id="about-me" className="about-me-section">
-          <h2>About Me</h2>
-          <h3>I like cats.</h3>
+          <div className="about-me-photo">
+            <img
+              src={catImage}
+              alt="A photo of my cat with a duotone black and white filter overlayed"
+              style={{ width: "350px", height: "auto" }}
+            />
+          </div>
+          <div className="about-me-text">
+            <h1>about me</h1>
+            <p>
+              <br />
+              My name is Jacob Solano and I am a student at Brown University
+              studying Computer Science!
+              <br />
+              <br />
+              In the past, I have worked with Java, Python, C,
+              Javascript/Typescript, Node.js, and more.
+              <br />
+              <br />
+              Some of my other interests lie in making music, playing animal
+              crossing, coloring, and thinking about my cat.
+            </p>
+          </div>
         </section>
         <section id="projects" className="project-section">
           <h2>Projects</h2>
@@ -139,17 +168,40 @@ const Homepage: React.FC = () => {
           <Link to="/accessiblecomponentsproject">Accessible Components</Link>
         </section>
         <section id="contact" className="contact-section">
-          <h2>Contact</h2>
-          <p>
-            You can reach me at{" "}
-            <a href="mailto:gilbert_solano@brown.edu">
-              gilbert_solano@brown.edu
+          <div className="contact-text">
+            <h1>contact me</h1>
+            <p>
+              <br />
+              Lets connect on LinkedIn or through email at{" "}
+              <a href="mailto:gilbert_solano@brown.edu">
+                gilbert_solano@brown.edu
+              </a>
+              !
+            </p>
+          </div>
+          <div className="contact-photo-links">
+            <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
+              <img
+                src={linkedinLogo}
+                alt="LinkedIn's Logo"
+                className="white-social-logo"
+                style={{ width: "100px", height: "auto" }}
+              />
             </a>
-          </p>
+
+            <a href="https://github.com/jacobsolanobrown">
+              <img
+                src={githubLogo}
+                alt="Github's Logo"
+                className="white-social-logo"
+                style={{ width: "100px", height: "auto" }}
+              />
+            </a>
+          </div>
         </section>
       </main>
       <footer>
-        <p>&copy; 2025 Jacob Solano</p>
+        <p>&copy; 2025 jacob solano</p>
       </footer>
     </div>
   );
