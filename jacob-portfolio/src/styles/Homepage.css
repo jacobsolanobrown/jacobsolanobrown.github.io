@@ -12,6 +12,8 @@ footer {
   background-color: white;
   padding: 20px;
   text-align: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .landing-section {
@@ -297,16 +299,6 @@ svg {
   text-decoration: underline;
 }
 
-.project-section {
-  background: linear-gradient(white, rgb(97, 111, 222));
-  color: black;
-  padding: 10px;
-  height: 100vh;
-  max-width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-
 .contact-section {
   background: linear-gradient(rgb(97, 111, 222), blue);
   height: 100vh;
@@ -361,4 +353,43 @@ svg {
 .contact-photo-links img:hover {
   transform: scale(1.2);
   filter: invert(90%);
+}
+
+.project-section {
+  background: linear-gradient(white, rgb(97, 111, 222));
+  color: black;
+  height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.projects-header {
+  font-size: 28px;
+  text-decoration: underline;
+  background-color: white;
+  color: blue;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  margin-top: 7.5%;
+}
+
+.projects-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  font-size: 24px;
+}
+
+.projects-content a:link,
+.projects-content a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+.projects-content a:hover {
+  color: gray;
 }

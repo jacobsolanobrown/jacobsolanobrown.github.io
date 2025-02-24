@@ -162,10 +162,14 @@ const Homepage: React.FC = () => {
           </div>
         </section>
         <section id="projects" className="project-section">
-          <h2>Projects</h2>
-          <h3>Applications</h3>
-          <h3>Design</h3>
-          <Link to="/accessiblecomponentsproject">Accessible Components</Link>
+          <div className="projects-header">
+            <h1>my projects</h1>
+          </div>
+          <div className="projects-content">
+            <Link to="/accessiblecomponentsproject">accessible components</Link>
+          </div>
+          {/* <h3>Applications</h3> */}
+          {/* <h3>Design</h3> */}
         </section>
         <section id="contact" className="contact-section">
           <div className="contact-text">
