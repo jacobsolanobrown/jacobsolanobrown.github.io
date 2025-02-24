@@ -77,7 +77,7 @@ const Homepage: React.FC = () => {
         <a href="#contact">Contact</a>
       </header> */}
       <main>
-        <section className="landing-section">
+        <section id="#landing-page" className="landing-section">
           <div className="landing-container">
             <div className="landing-text">
               <p>hi i am</p>
