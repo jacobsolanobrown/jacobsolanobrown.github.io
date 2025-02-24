@@ -5,6 +5,7 @@ import "../styles/Homepage.css";
 import catImage from "../assets/cat_duotone.png";
 import githubLogo from "../assets/githublogo.svg";
 import linkedinLogo from "../assets/linkedinlogo.svg";
+import linkicon from "../assets/linkicon.svg";
 
 const Homepage: React.FC = () => {
   useEffect(() => {
@@ -166,7 +167,10 @@ const Homepage: React.FC = () => {
             <h1>my projects</h1>
           </div>
           <div className="projects-content">
-            <Link to="/accessiblecomponentsproject">accessible components</Link>
+              <Link to="/accessiblecomponentsproject">
+                <a>accessible components</a>
+                <img src={linkicon} alt="Blue icon for a link icon" />
+              </Link>
           </div>
           {/* <h3>Applications</h3> */}
           {/* <h3>Design</h3> */}

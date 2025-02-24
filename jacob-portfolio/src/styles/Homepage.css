@@ -65,7 +65,7 @@ footer {
 }
 
 .landing-text a:hover {
-  color: lightblue;
+  color: gray;
 }
 
 .nav-box {
@@ -99,7 +99,7 @@ footer {
 }
 
 .nav-links a:hover {
-  color: lightblue;
+  color: lightgray;
 }
 
 :root {
@@ -290,7 +290,7 @@ svg {
   width: 35%;
   height: auto;
   font-size: 28px;
-  color: black;
+  color: blue;
   padding: 60px;
   margin-left: 40px;
 }
@@ -332,7 +332,7 @@ svg {
 }
 
 .contact-text a:hover {
-  color: lightblue;
+  color: lightgray;
 }
 
 .contact-photo-links {
@@ -354,6 +354,8 @@ svg {
   transform: scale(1.2);
   filter: invert(90%);
 }
+
+/* ---- PROJECT SECTION ---- */
 
 .project-section {
   background: linear-gradient(white, rgb(97, 111, 222));
@@ -382,6 +384,10 @@ svg {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   font-size: 24px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .projects-content a:link,
@@ -390,6 +396,24 @@ svg {
   color: blue;
 }
 
-.projects-content a:hover {
-  color: gray;
+.projects-content a:hover img {
+  transform: translate(5px, -5px);  
 }
+
+.projects-content a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.projects-content a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.projects-content img {
+    margin-bottom: 5px;
+}
+
