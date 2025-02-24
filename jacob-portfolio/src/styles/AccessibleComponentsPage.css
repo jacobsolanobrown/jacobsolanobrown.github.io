@@ -1,0 +1,13 @@
+footer {
+    font-weight: bold;
+}
+
+footer a:link, 
+footer a.visited {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: blue;
+}

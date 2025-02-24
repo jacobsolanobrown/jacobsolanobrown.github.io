@@ -397,7 +397,7 @@ svg {
 }
 
 .projects-content a:hover img {
-  transform: translate(5px, -5px);  
+  transform: translate(5px, -5px);
 }
 
 .projects-content a:hover {
@@ -414,6 +414,6 @@ svg {
 }
 
 .projects-content img {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
+  transition: transform 0.2s ease-in-out; /* Smooth transition for the transform property */
 }
-
