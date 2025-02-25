@@ -293,6 +293,7 @@ svg {
   color: blue;
   padding: 60px;
   margin-left: 40px;
+  text-align: justify;
 }
 
 .about-me-text h1 {
