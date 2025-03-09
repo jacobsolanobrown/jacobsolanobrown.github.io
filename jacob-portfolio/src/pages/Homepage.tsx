@@ -167,10 +167,16 @@ const Homepage: React.FC = () => {
             <h1>my projects</h1>
           </div>
           <div className="projects-content">
-              <Link to="/accessiblecomponentsproject">
-                <a>accessible components</a>
-                <img src={linkicon} alt="Blue icon for a link icon" />
-              </Link>
+            <Link to="/accessiblecomponentsproject">
+              <a>accessible components</a>
+              <img src={linkicon} alt="Blue icon for a link icon" />
+            </Link>
+          </div>
+          <div className="projects-content">
+            <Link to="/personastoryboardingproject">
+              <a>persona storyboarding</a>
+              <img src={linkicon} alt="Blue icon for a link icon" />
+            </Link>
           </div>
           {/* <h3>Applications</h3> */}
           {/* <h3>Design</h3> */}

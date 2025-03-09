@@ -51,7 +51,7 @@ const AccessibleComponentsProject: React.FC = () => {
               <br />
             </p>
             <p>
-              Each of these applications implements the component differently,
+              Each of these applications implement the component differently,
               influencing how users interact with it via mouse and keyboard
               inputs. The goal is to understand:
               <br />
@@ -66,9 +66,9 @@ const AccessibleComponentsProject: React.FC = () => {
               <br />
               Beyond analysis, this project also explores potential improvements
               to the component by designing a revised version that enhances
-              usability, particularly for keyboard users. Through state models
+              usability/accessibility for certain users. Through state models
               and annotated designs, we’ll propose intentional trade-offs that
-              balance functionality and accessibility. EDIIITT
+              balance functionality and accessibility.
             </p>
           </div>
         </section>
@@ -379,7 +379,7 @@ const AccessibleComponentsProject: React.FC = () => {
               state models.
             </p>
             <br />
-            <div className="mouse-state-init">
+            <div className="state-model">
               <img
                 src="./src/assets/accessible-components-assets/stmdl_mouse_init.png"
                 alt="State model for mouse users at the initial state of Ticketmaster's accordion design."
@@ -390,8 +390,15 @@ const AccessibleComponentsProject: React.FC = () => {
               />
             </div>
             <br />
-            <div className="key-state-init">
-              \<p>BEYONCE</p>
+            <div className="state-model">
+              <img
+                src="./src/assets/accessible-components-assets/stmdl_mouse_redesign.png"
+                alt="State model for mouse users at the redesigned state of Ticketmaster's accordion design."
+              />
+              <img
+                src="./src/assets/accessible-components-assets/stmdl_key_redesign.png"
+                alt="State model for keyboard users at the redesigned state of Ticketmaster's accordion design."
+              />
             </div>
             <br />
             <p>

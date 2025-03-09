@@ -188,30 +188,20 @@ table td {
   text-align: justify;
 }
 
-.mouse-state-init, 
-.key-state-init {
-  background-color: white;
+.state-model {
+  background-color: red;
   color: black;
   display: flex;
 }
 
-.mouse-state-init, 
-.key-state-init p {
-  background-color: white;
-  color: black;
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-}
 
-.key-state-init img, 
-.mouse-state-init img {
-    width: 50%;
+.state-model img {
+  width: 50%;
   height: auto;
 }
 
 .summary-section {
-  background-color: #615cbf;
+  background-color: #1f238b;
   color: white;
   padding-left: 120px;
 }
