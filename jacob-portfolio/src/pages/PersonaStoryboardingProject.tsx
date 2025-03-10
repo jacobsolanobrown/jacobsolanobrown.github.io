@@ -21,8 +21,8 @@ const PersonaStoryboardingProject: React.FC = () => {
           <h3>with the McDonald's Self-Service Kiosk</h3>
         </div>
         <img
-          src="./src/assets/persona-storyboarding-assets/mcdonald_logo.png"
-          alt=""
+          src="./src/assets/mcdonald_logo.png"
+          alt="mcdonald's logo in yellow"
         />
       </div>
       <div id="01" className="intro-container">
@@ -47,11 +47,11 @@ const PersonaStoryboardingProject: React.FC = () => {
         </p>
         <div className="preparation-container-images">
           <img
-            src="./src/assets/persona-storyboarding-assets/mc_login_screen.png"
+            src="./src/assets/mc_login_screen.png"
             alt="sketch of the McDonald's kiosk login screen"
           />
           <img
-            src="./src/assets/persona-storyboarding-assets/mc_menu_screen.png"
+            src="./src/assets/mc_menu_screen.png"
             alt="sketch of the McDonald's kiosk menu screen"
           />
           <div className="component-list">
@@ -189,7 +189,7 @@ const PersonaStoryboardingProject: React.FC = () => {
               late pickup fee at the daycare.
             </p>
             <img
-              src="./src/assets/persona-storyboarding-assets/parent_empathy_map.jpg"
+              src="./src/assets/parent_empathy_map.jpg"
               alt="a persona map for a parent user named Taylor"
             />
           </div>
@@ -202,7 +202,7 @@ const PersonaStoryboardingProject: React.FC = () => {
               home.
             </p>
             <img
-              src="./src/assets/persona-storyboarding-assets/older_person_empathy_map.jpg"
+              src="./src/assets/older_person_empathy_map.jpg"
               alt="a persona map for an older user named Rory"
             />
           </div>
@@ -220,15 +220,15 @@ const PersonaStoryboardingProject: React.FC = () => {
         </p>
         <div className="storyboard-images">
           <img
-            src="./src/assets/persona-storyboarding-assets/square-story-1-3.png"
+            src="./src/assets/square-story-1-3.png"
             alt="storyboard image for frames 1-3"
           />
           <img
-            src="./src/assets/persona-storyboarding-assets/square-story-4-6.png"
+            src="./src/assets/square-story-4-6.png"
             alt="storyboard image for frames 4-6"
           />
           <img
-            src="./src/assets/persona-storyboarding-assets/square-story-7-9.png"
+            src="./src/assets/square-story-7-9.png"
             alt="storyboard image for frames 7-9"
           />
         </div>
