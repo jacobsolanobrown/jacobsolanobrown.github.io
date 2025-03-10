@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/PersonaStoryboardPage.css";
-import McdonaldsLogo from "../src/assets/persona-storyboarding-assets/mcdonald_logo.png";
-import LoginScreen from "../src/assets/persona-storyboarding-assets/mc_login_screen.png";
-import MenuScreen from "../src/assets/persona-storyboarding-assets/mc_menu_screen.png";
-import ParentEmpathyMap from "../src/assets/persona-storyboarding-assets/parent_empathy_map.jpg";
-import OlderPersonEmpathyMap from "../src/assets/persona-storyboarding-assets/older_person_empathy_map.jpg";
-import SquareStory1_3 from "../src/assets/persona-storyboarding-assets/square-story-1-3.png";
-import SquareStory4_6 from "../src/assets/persona-storyboarding-assets/square-story-4-6.png";
-import SquareStory7_9 from "../src/assets/persona-storyboarding-assets/square-story-7-9.png";
+import McdonaldsLogo from "../assets/persona-storyboarding-assets/mcdonald_logo.png";
+import LoginScreen from "../assets/persona-storyboarding-assets/mc_login_screen.png";
+import MenuScreen from "../assets/persona-storyboarding-assets/mc_menu_screen.png";
+import ParentEmpathyMap from "../assets/persona-storyboarding-assets/parent_empathy_map.jpg";
+import OlderPersonEmpathyMap from "../assets/persona-storyboarding-assets/older_person_empathy_map.jpg";
+import SquareStory1_3 from "..//assets/persona-storyboarding-assets/square-story-1-3.png";
+import SquareStory4_6 from "../assets/persona-storyboarding-assets/square-story-4-6.png";
+import SquareStory7_9 from "../assets/persona-storyboarding-assets/square-story-7-9.png";
 
 
 const PersonaStoryboardingProject: React.FC = () => {
