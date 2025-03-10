@@ -2,8 +2,19 @@ h2 {
   text-decoration: underline;
 }
 
-.acc-nav-bar {
-    background-color: red;
+.acc-nav-bar-persona {
+  display: flex;
+  background-color: red;
+  position: sticky;
+  top: 0; /* ensures the nav bar sticks to the top */
+  z-index: 100;
+  width: fit-content;
+  max-width: 50%;
+  height: fit-content;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  /* object-fit: contain; */
 }
 
 .persona-storyboard-container {
@@ -197,16 +208,16 @@ h2 {
 }
 
 .storyboard-images {
-    width: 70%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
 
-    gap: 40px;
-    background-color: white;
-    text-align: left;
+  gap: 40px;
+  background-color: white;
+  text-align: left;
 }
 
 .conclusion-container {
@@ -222,4 +233,3 @@ h2 {
   gap: 40px;
   text-align: justify;
 }
-

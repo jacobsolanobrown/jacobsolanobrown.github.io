@@ -6,7 +6,6 @@ import catImage from "../assets/cat_duotone.png";
 import githubLogo from "../assets/githublogo.svg";
 import linkedinLogo from "../assets/linkedinlogo.svg";
 import linkicon from "../assets/linkicon.svg";
-import PersonaStoryboardingProject from "./PersonaStoryboardingProject";
 
 const Homepage: React.FC = () => {
   useEffect(() => {
@@ -218,7 +217,6 @@ const Homepage: React.FC = () => {
       <footer>
         <p>&copy; 2025 jacob solano</p>
       </footer>
-      <PersonaStoryboardingProject />
     </div>
   );
 };

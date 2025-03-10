@@ -15,7 +15,7 @@ const PersonaStoryboardingProject: React.FC = () => {
   return (
     <div className="persona-storyboard-container">
       {/* THE NAV BAR */}
-      <div className="acc-nav-bar">
+      <div className="acc-nav-bar-persona">
         <div className="acc-nav-links">
           <a href="#01">introduction</a>
           <a href="#02">exploration</a>
