@@ -1,7 +1,7 @@
 :root {
   /* font-family: Clash Grotesk; */
   font-family: Helvetica, sans-serif;
-  color-scheme: light dark;
+  color-scheme: light; /* light or dark */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
