@@ -206,6 +206,11 @@ table td {
   padding-left: 120px;
 }
 
+.summary-section a {
+  color: white;
+  text-decoration: underline;
+}
+
 footer {
   font-weight: bold;
 }

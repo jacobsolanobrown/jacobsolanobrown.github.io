@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/AccessibleComponentsPage.css";
 
 const AccessibleComponentsProject: React.FC = () => {
@@ -18,7 +18,8 @@ const AccessibleComponentsProject: React.FC = () => {
         {/* TITLE SECTION */}
         <section id="00" className="title-section">
           <h1>Accessible Components </h1>
-          <p>User Interaction Case Study</p>
+          <h3>User Interaction Case Study</h3>
+          <h5>CSCI1300: Interaction Design</h5>
         </section>
         {/* INTRO SECTION */}
         <section id="01" className="intro-section">
@@ -406,16 +407,20 @@ const AccessibleComponentsProject: React.FC = () => {
               purposefully makes compromises to achieve a better user experience
               without compromising core functionality.
             </p>
+            <h1>Under Construction!</h1>
           </div>
         </section>
         {/* SUMMARY SECTION */}
         <section id="04" className="summary-section">
           <h1>04. Conclusions</h1>
+          <NavLink to="/">{"<"} Back to the Home Page</NavLink>
         </section>
       </main>
       <footer>
         <p>
-          <Link to="/#landing-page">&copy; 2025 jacob solano</Link>
+          <NavLink to="/#landing-page">
+            Made with love by &copy; 2025 Jacob Solano
+          </NavLink>
         </p>
       </footer>
     </div>

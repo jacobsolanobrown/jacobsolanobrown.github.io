@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/PersonaStoryboardPage.css";
 import McdonaldsLogo from "../assets/persona-storyboarding-assets/mcdonald_logo.png";
 import LoginScreen from "../assets/persona-storyboarding-assets/mc_login_screen.png";
@@ -28,6 +28,7 @@ const PersonaStoryboardingProject: React.FC = () => {
         <div className="title-text">
           <h1>Understanding Users Through Personas and Storyboarding</h1>
           <h3>with the McDonald's Self-Service Kiosk</h3>
+          <h5>CSCI1300: Interaction Design</h5>
         </div>
         <img src={McdonaldsLogo} alt="mcdonald's logo in yellow" />
       </div>
@@ -243,10 +244,11 @@ const PersonaStoryboardingProject: React.FC = () => {
           research plays in creating interfaces that are inclusive,
           user-centered, and intuitive for everyone.
         </p>
+        <NavLink to="/">{"<"} Back to the Home Page</NavLink>
       </div>
       <div>
         <footer>
-          <Link to="/">Made with love by Jacob Solano</Link>
+          <NavLink to="/"> Made with love by &copy; 2025 Jacob Solano</NavLink>
         </footer>
       </div>
     </div>

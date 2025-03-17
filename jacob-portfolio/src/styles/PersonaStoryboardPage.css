@@ -233,3 +233,8 @@ h2 {
   gap: 40px;
   text-align: justify;
 }
+
+.conclusion-container a {
+  color: white;
+  text-decoration: underline;
+}

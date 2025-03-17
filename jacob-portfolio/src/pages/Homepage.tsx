@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/Homepage.css";
 import catImage from "../assets/cat_duotone.png";
 import githubLogo from "../assets/githublogo.svg";
@@ -167,16 +167,16 @@ const Homepage: React.FC = () => {
             <h1>my projects</h1>
           </div>
           <div className="projects-content">
-            <Link to="/accessiblecomponentsproject">
+            <NavLink to="/accessiblecomponentsproject">
               <a>accessible components</a>
               <img src={linkicon} alt="Blue icon for a link icon" />
-            </Link>
+            </NavLink>
           </div>
           <div className="projects-content">
-            <Link to="/personastoryboardingproject">
+            <NavLink to="/personastoryboardingproject">
               <a>persona storyboarding</a>
               <img src={linkicon} alt="Blue icon for a link icon" />
-            </Link>
+            </NavLink>
           </div>
           {/* <h3>Applications</h3> */}
           {/* <h3>Design</h3> */}
