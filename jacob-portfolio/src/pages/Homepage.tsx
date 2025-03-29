@@ -77,65 +77,68 @@ const Homepage: React.FC = () => {
         <a href="#contact">Contact</a>
       </header> */}
       <main>
-        <section id="#landing-page" className="landing-section">
-          <div className="landing-container">
-            <div className="landing-text">
-              <p>hi i am</p>
-              <h1>
-                <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
-                  jacob solano
-                </a>
-                ,
-              </h1>
-              <p>
-                a fullstack developer currently at brown
-                {/* <br />
-                and i like cats, among other things */}
-              </p>
+        <section id="#landing-page" className="landing-section-outer">
+          <div className="landing-section-inner">
+            <div className="gradient-bg">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur
+                      in="SourceGraphic"
+                      stdDeviation="10"
+                      result="blur"
+                    />
+                    <feColorMatrix
+                      in="blur"
+                      mode="matrix"
+                      values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                      result="goo"
+                    />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                  </filter>
+                </defs>
+              </svg>
+              <div className="gradient-container">
+                <div className="g1"></div>
+                <div className="g2"></div>
+                <div className="g3"></div>
+                <div className="g4"></div>
+                <div className="g5"></div>
+                <div className="g6"></div>
+                <div className="g7"></div>
+                <div className="interaction"></div>
+              </div>
             </div>
-            <img
-              src={catImage}
-              alt="A photo of my cat with a duotone black and white filter overlayed"
-              style={{ width: "300px", height: "auto" }}
-            />
-          </div>
-          <div className="gradient-bg">
-            <svg xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <filter id="goo">
-                  <feGaussianBlur
-                    in="SourceGraphic"
-                    stdDeviation="10"
-                    result="blur"
-                  />
-                  <feColorMatrix
-                    in="blur"
-                    mode="matrix"
-                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
-                    result="goo"
-                  />
-                  <feBlend in="SourceGraphic" in2="goo" />
-                </filter>
-              </defs>
-            </svg>
-            <div className="gradient-container">
-              <div className="g1"></div>
-              <div className="g2"></div>
-              <div className="g3"></div>
-              <div className="g4"></div>
-              <div className="g5"></div>
-              <div className="g6"></div>
-              <div className="g7"></div>
-              <div className="interaction"></div>
+            <div className="landing-container">
+              <div className="landing-text">
+                <p>hi, i am</p>
+                <h1>
+                  <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
+                    jacob
+                    <br />
+                    solano
+                  </a>
+                  ,
+                </h1>
+                <p>
+                  and I’m a full-stack SWE who builds reliable systems with
+                  precision, purpose, and a touch of childlike wonder.{" "}
+                  {/* <br />
+                and i like cats, among other things */}
+                </p>
+              </div>
+              <img
+                src={catImage}
+                alt="A photo of my cat with a duotone black and white filter overlayed"
+                style={{ width: "300px", height: "auto" }}
+              />
             </div>
           </div>
         </section>
         <div className="nav-box">
-          <div className="nav-links">
-            <a href="#about-me">about</a>
-            <a href="#projects">projects</a>
-            <a href="#contact">contact</a>
-          </div>
+          <a href="#about-me">about</a>
+          <a href="#projects">projects</a>
+          <a href="#contact">contact</a>
         </div>
         <section id="about-me" className="about-me-section">
           <div className="about-me-photo">
