@@ -6,6 +6,8 @@ import catImage from "../assets/cat_duotone.png";
 import githubLogo from "../assets/githublogo.svg";
 import linkedinLogo from "../assets/linkedinlogo.svg";
 import linkicon from "../assets/linkicon.svg";
+import mountainImage from "../assets/mountain.jpeg";
+import pinkblur from "../assets/pink_blur.svg";
 
 const Homepage: React.FC = () => {
   useEffect(() => {
@@ -71,13 +73,39 @@ const Homepage: React.FC = () => {
           />
         </filter>
       </svg>
-      {/* <header>
-        <h1>Jacob Solano</h1>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </header> */}
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ position: "absolute", width: 0, height: 0 }}
+      >
+        <defs>
+          <filter id="radialBlur">
+            {/* Generate a turbulence pattern */}
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.8"
+              numOctaves="2"
+              result="noise"
+            />
+            {/* Apply a Gaussian blur to the noise */}
+            <feGaussianBlur
+              in="noise"
+              stdDeviation="150"
+              result="blurredNoise"
+            />
+            {/* Displace the original graphic using the blurred noise */}
+            <feDisplacementMap
+              in="SourceGraphic"
+              in2="blurredNoise"
+              scale="250"
+              xChannelSelector="R"
+              yChannelSelector="G"
+            />
+          </filter>
+        </defs>
+      </svg>
       <main>
-        <section id="#landing-page" className="landing-section-outer">
+        <section id="landing-page" className="landing-section-outer">
           <div className="landing-section-inner">
             <div className="gradient-bg">
               <svg xmlns="http://www.w3.org/2000/svg">
@@ -141,28 +169,36 @@ const Homepage: React.FC = () => {
           <a href="#contact">contact</a>
         </div>
         <section id="about-me" className="about-me-section">
-          <div className="about-me-photo">
+          <h1>about me</h1>
+          <div className="pink-1">
+            <img src={pinkblur} alt="" />
+          </div>
+          {/* TODO: add  blue blur to the bottom right - do the same thing as you did with pink blur - seems to be responsive enough  */}
+          <div className="about-me-card">
+            <div className="about-me-text">
+              <p>
+                <br />
+                Hello! My name is Jacob Solano and I am a student at Brown
+                University pursuing a degree in Computer Science. I’m driven by
+                curiosity and creativity, and I aspire to be in a career where I
+                can solve real-world problems through clean, thoughtful
+                engineering.
+                <br />
+                <br />
+                I’ve worked with Java, Python, C, JavaScript/TypeScript,
+                Node.js, and more, gaining experience across the stack in both
+                academic and personal projects.
+                <br />
+                <br />
+                Outside of code, I make music, play my Nintendo 3DS, color to
+                unwind, and spend too much time thinking about my cat.
+              </p>
+            </div>
             <img
-              src={catImage}
-              alt="A photo of my cat with a duotone black and white filter overlayed"
+              src={mountainImage}
+              alt="A photo of Mount Rainer covered in clouds."
               style={{ width: "350px", height: "auto" }}
             />
-          </div>
-          <div className="about-me-text">
-            <h1>about me</h1>
-            <p>
-              <br />
-              My name is Jacob Solano and I am a student at Brown University
-              studying Computer Science!
-              <br />
-              <br />
-              In the past, I have worked with Java, Python, C,
-              Javascript/Typescript, Node.js, and more.
-              <br />
-              <br />
-              Some of my other interests lie in making music, playing animal
-              crossing, coloring, and thinking about my cat.
-            </p>
           </div>
         </section>
         <section id="projects" className="project-section">
@@ -181,8 +217,12 @@ const Homepage: React.FC = () => {
               <img src={linkicon} alt="Blue icon for a link icon" />
             </NavLink>
           </div>
-          {/* <h3>Applications</h3> */}
-          {/* <h3>Design</h3> */}
+          <div className="projects-content">
+            <NavLink to="/responsiveredesign">
+              <a>responsive redesign</a>
+              <img src={linkicon} alt="Blue icon for a link icon" />
+            </NavLink>
+          </div>
         </section>
         <section id="contact" className="contact-section">
           <div className="contact-text">

@@ -6,13 +6,15 @@ import Homepage from "./pages/Homepage";
 import AccessibleComponentsProject from "./pages/AccessibleComponentsProject";
 import PersonaStoryboardingProject from "./pages/PersonaStoryboardingProject";
 import ScrollToTop from "./components/ScrollToTop";
+import TonysBigCheesePizzaHomepage from "./pages/TonysBigCheesePizzaHomepage";
+import ResponsiveRedesign from "./pages/ResponsiveRedesign";
 
 // Scroll to Top components helps the position of the page when navigating
 // between different pages
 const App: React.FC = () => {
   return (
     <Router>
-      <ScrollToTop /> 
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route
@@ -23,10 +25,17 @@ const App: React.FC = () => {
           path="/personastoryboardingproject"
           element={<PersonaStoryboardingProject />}
         />
+        <Route
+          path="/tonysbigcheesepizzahomepage"
+          element={<TonysBigCheesePizzaHomepage />}
+        />
+        <Route 
+          path="/responsiveredesign"
+          element={<ResponsiveRedesign />}
+        />
       </Routes>
     </Router>
   );
 };
-
 
 export default App;
