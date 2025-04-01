@@ -12,7 +12,10 @@
   </head>
   <body class="tonys-big-cheese-pizza-homepage">
     <div class="tonys-logo">
-      <img src="tonys-assets/TonysLogo.png" alt="The logo of Tony's Big Cheese Pizza Restaurant" />
+      <img
+        src="tonys-assets/TonysLogo.png"
+        alt="The logo of Tony's Big Cheese Pizza Restaurant"
+      />
     </div>
     <div id="home" class="landing-section">
       <!-- Desktop navigation  -->
@@ -24,12 +27,13 @@
         <a href="#contact">Contact</a>
       </div>
       <!-- Mobile navigation accordion -->
-      <img class="mobile-nav-img" src="tonys-assets/Grip Lines.png" alt="Two lines for an accordion dropdown.">
+      <img
+        class="mobile-nav-img"
+        src="tonys-assets/Grip Lines.png"
+        alt="Two lines for a hamburger dropdown as a navigation option."
+      />
       <div class="tonys-pic-and-text">
-        <img
-          src="tonys-assets/main-pizza.png"
-          alt="Picture of tonys pizza."
-        />
+        <img src="tonys-assets/main-pizza.png" alt="Picture of tonys pizza." />
         <div class="tonys-pizza-text">
           <div class="landing-pizza-title">
             <h3>Welcome to</h3>
@@ -73,30 +77,12 @@
         <button>VIEW MENU</button>
       </div>
       <div class="menu-photos">
-        <img
-          src="tonys-assets/PizzaTile.jpeg"
-          alt="something"
-        />
-        <img
-          src="tonys-assets/SpecialsTile.jpeg"
-          alt="something"
-        />
-        <img
-          src="tonys-assets/CalzoneTile.jpeg"
-          alt="something"
-        />
-        <img
-          src="tonys-assets/WingsTile.jpeg"
-          alt="something"
-        />
-        <img
-          src="tonys-assets/BreadTile.jpeg"
-          alt="something"
-        />
-        <img
-          src="tonys-assets/SaladTile.jpeg"
-          alt="something"
-        />
+        <img src="tonys-assets/PizzaTile.jpeg" alt="tonys pizza menu option" />
+        <img src="tonys-assets/SpecialsTile.jpeg" alt="tonys specials menu option" />
+        <img src="tonys-assets/CalzoneTile.jpeg" alt="tonys calzone menu option" />
+        <img src="tonys-assets/WingsTile.jpeg" alt="tonys wings menu option" />
+        <img src="tonys-assets/BreadTile.jpeg" alt="tonys breads menu option" />
+        <img src="tonys-assets/SaladTile.jpeg" alt="tonys salad menu option" />
       </div>
     </div>
     <div id="location & hours" class="location-and-hours">
@@ -175,14 +161,23 @@
       <h3>Or Send Us A Message!</h3>
       <div class="contact-tonys-form">
         <form>
-          <label htmlFor="name">Name:</label>
-          <input type="text" placeholder="Name" />
-          <label htmlFor="email">E-mail:</label>
-          <input type="email" placeholder="E-mail" />
-          <label htmlFor="phone">Phone Number:</label>
-          <input type="text" placeholder="Phone Number" />
-          <label htmlFor="message">Message:</label>
-          <textarea placeholder="Message"></textarea>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Name" />
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="E-mail" />
+          <label for="phone">Phone Number:</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Phone Number"
+          />
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+          ></textarea>
           <button type="submit">SUBMIT</button>
         </form>
       </div>
