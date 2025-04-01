@@ -92,22 +92,8 @@ h2 {
   text-align: left;
 }
 
-.preparation-container-images {
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  gap: 40px;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  background-color: white;
-  text-align: left;
-}
-
-.preparation-container-images img {
-  width: 25%;
-  height: auto;
-  object-fit: contain;
+.preparation-container img {
+  width: 50%;
 }
 
 .component-list {
@@ -137,6 +123,8 @@ h2 {
   gap: 40px;
   text-align: left;
 }
+
+
 
 .persona-container img {
   width: 50%;
