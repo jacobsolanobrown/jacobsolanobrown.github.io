@@ -1,0 +1,807 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  background-color: #6f1212;
+}
+
+.tonys-logo {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 15px;
+}
+
+.tonys-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.tonys-big-cheese-pizza-homepage h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+  font-family: "Righteous", cursive;
+  text-decoration: none;
+  margin: 0;
+}
+
+.mobile-nav-img {
+  display: none;
+}
+
+.tonys-big-cheese-pizza-homepage p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.tonys-big-cheese-pizza-homepage h1 {
+  font-size: 36px;
+}
+
+.landing-section {
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  width: auto;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+
+.tonys-nav-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.tonys-nav-bar a {
+  font-size: 24px;
+  text-decoration: none;
+
+  color: #793636;
+}
+
+.tonys-pic-and-text {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.tonys-pic-and-text img {
+  width: 30%;
+  height: 100%;
+  object-fit: fill;
+
+  border-radius: 25px;
+}
+
+.tonys-pizza-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 70%;
+
+  font-size: 20px;
+}
+
+.landing-pizza-title h1,
+h3 {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #793636;
+}
+
+.tonys-call-to-action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+
+  font-size: 20px;
+}
+
+.tonys-call-to-action button {
+  background-color: #c60a0a;
+  color: white;
+
+  border: none;
+  border-radius: 15px;
+
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-size: 24px;
+}
+
+.tonys-call-to-action button:hover {
+  background-color: #9a1010;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: wrap;
+  gap: 50px;
+
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 75px;
+
+  color: white;
+}
+
+.menu-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  text-align: justify;
+  font-size: 24px;
+}
+
+.menu-text button {
+  background-color: #ead86f;
+  color: black;
+
+  border: none;
+  border-radius: 15px;
+
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-size: 24px;
+}
+
+.menu-text button:hover {
+  background-color: #ae7e5b;
+}
+
+.menu-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 15px;
+  justify-content: center;
+  align-content: center;
+}
+
+.menu-photos img {
+  width: 200px;
+  height: 200px;
+
+  border-radius: 25px;
+}
+
+.location-and-hours {
+  display: flex;
+  flex-direction: wrap;
+  gap: 50px;
+
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 75px;
+
+  color: white;
+
+  font-size: 24px;
+}
+
+.location-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  width: 50%;
+}
+
+.location-img {
+  width: 100%;
+}
+
+.location-content-map {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border: none;
+
+  border-radius: 25px;
+}
+
+.hours-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  width: 50%;
+}
+
+.structured-hours {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.about-section {
+  background-color: white;
+  border-radius: 50px;
+
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 75px;
+
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  padding-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  font-size: 24px;
+  text-align: justify;
+}
+
+.about-section h2 {
+  color: #c60a0a;
+}
+
+.tonys-contact-section h2 {
+  color: #6f1212;
+}
+
+.tonys-contact-section {
+  background-color: white;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+
+  font-size: 24px;
+
+  margin-top: 75px;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  gap: 30px;
+}
+
+.contact-tonys-form {
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+}
+
+.tonys-contact-section form {
+  font-family: "Montserrat", sans-serif;
+
+  background-color: #6f1212;
+  color: white;
+
+  border-radius: 50px;
+
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  gap: 25px;
+  box-sizing: border-box;
+}
+
+.tonys-contact-section input,
+textarea {
+  border-radius: 15px;
+  border: none;
+  padding: 15px;
+
+  font-size: 20px;
+  max-width: 100%;
+  min-width: 100%;
+
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+.tonys-contact-section form button {
+  background-color: white;
+  color: black;
+}
+
+.tonys-contact-section form button:hover {
+  background-color: rgb(196, 192, 192);
+}
+
+.tonys-contact-section button {
+  background-color: black;
+  color: white;
+
+  border: none;
+  border-radius: 15px;
+
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-size: 20px;
+
+  width: auto;
+
+  align-self: center;
+}
+
+.tonys-contact-section button:hover {
+  background-color: #6f1212;
+}
+
+/* Mobile devices (phones) */
+@media only screen and (max-width: 600px) {
+  .landing-section {
+    padding-left: 25px;
+    padding-right: 25px;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .tonys-nav-bar {
+    display: none;
+  }
+
+  .tonys-logo {
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+
+  .mobile-nav-img {
+    display: block;
+    align-self: flex-end;
+  }
+
+  /* LANDING SECTION - MOBILE */
+  .tonys-pic-and-text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .tonys-pic-and-text img {
+    width: 70%; /* Scale image to fit the smaller screen */
+    height: auto;
+  }
+
+  .landing-pizza-title {
+    text-align: center;
+  }
+
+  .tonys-call-to-action {
+    flex-direction: column;
+  }
+
+  .tonys-pizza-text {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  /* MENU SECTION - MOBILE */
+
+  .menu-section {
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .menu-section button {
+    width: 50%;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .menu-text {
+    text-align: justify;
+    font-size: 16px;
+    gap: 20px;
+  }
+
+  .menu-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+
+    row-gap: 15px;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .menu-photos img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  /* LOCATION & HOURS SECTION - MOBILE */
+
+  .location-and-hours {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .location-content {
+    width: 100%;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .location-content-map {
+    height: 150px;
+  }
+
+  .hours-content {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .structured-hours {
+    gap: 20px;
+  }
+
+  .about-section {
+    margin-top: 50px;
+    font-size: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    width: 100%;
+    margin-left: 0;
+    gap: 25px;
+  }
+
+  .tonys-contact-section {
+    font-size: 16px;
+    margin-top: 50px;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .tonys-contact-section form {
+    padding-top: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 35px;
+
+    gap: 15px;
+    background-color: 6f1212;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tonys-contact-section input,
+  textarea {
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tonys-contact-section button {
+    width: 50%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .tonys-contact-section h4 {
+    text-align: center;
+  }
+}
+
+/* Tablet devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .landing-section {
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 40px;
+  }
+
+  .tonys-nav-bar {
+    display: none;
+  }
+
+  .tonys-logo {
+    margin-left: 50px;
+    margin-top: 15px;
+  }
+
+  .mobile-nav-img {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .tonys-pic-and-text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .tonys-pic-and-text img {
+    width: 40%;
+    height: auto;
+  }
+
+  .landing-pizza-title {
+    text-align: center;
+  }
+
+  .tonys-pizza-text {
+    width: 100%;
+    font-size: 20px;
+    align-items: center;
+  }
+
+  .menu-section {
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-direction: column;
+  }
+
+  .menu-text {
+    font-size: 20px;
+  }
+
+  .menu-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+
+    row-gap: 15px;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .menu-photos img {
+    justify-self: center;
+    width: 80%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .location-and-hours {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-content {
+    width: 100%;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hours-content {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .about-section {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    gap: 25px;
+    font-size: 20px;
+  }
+
+  .tonys-contact-section {
+    margin-top: 50px;
+
+    padding-left: 35px;
+    padding-right: 35px;
+
+    gap: 15px;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tonys-contact-section form {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .location-and-hours,
+  .about-section {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .location-and-hours {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hours-content {
+    width: 100%;
+  }
+
+  .menu-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 15px;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+/* LARGE DESKTOP VIEW */
+@media only screen and (min-width: 1600px) {
+  .landing-section {
+    gap: 70px;
+  }
+
+  .tonys-nav-bar {
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .tonys-nav-bar a {
+  }
+
+  .tonys-logo {
+    margin-left: 100px;
+    width: 200px;
+  }
+
+  .tonys-pic-and-text {
+    flex-direction: row; /* Side-by-side for large screens */
+    gap: 50px;
+  }
+
+  .tonys-pic-and-text img {
+    width: 30%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .tonys-pizza-text {
+    width: 70%;
+  }
+
+  .menu-section {
+    margin-left: 100px;
+    margin-right: 100px;
+    flex-direction: column;
+  }
+
+  .menu-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+    width: 100%;
+    align-self: center;
+
+    row-gap: 15px;
+
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  .menu-photos img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .menu-section,
+  .location-and-hours,
+  .about-section {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .menu-text {
+  }
+
+  .location-content-map {
+    height: 500px;
+  }
+
+  .tonys-contact-section {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .tonys-contact-section button {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .menu-text button {
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .tonys-call-to-action button {
+    padding: 20px;
+  }
+}
