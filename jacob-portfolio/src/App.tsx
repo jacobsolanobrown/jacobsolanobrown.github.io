@@ -6,7 +6,6 @@ import Homepage from "./pages/Homepage";
 import AccessibleComponentsProject from "./pages/AccessibleComponentsProject";
 import PersonaStoryboardingProject from "./pages/PersonaStoryboardingProject";
 import ScrollToTop from "./components/ScrollToTop";
-import TonysBigCheesePizzaHomepage from "./pages/TonysBigCheesePizzaHomepage";
 import ResponsiveRedesign from "./pages/ResponsiveRedesign";
 
 // Scroll to Top components helps the position of the page when navigating
@@ -24,10 +23,6 @@ const App: React.FC = () => {
         <Route
           path="/personastoryboardingproject"
           element={<PersonaStoryboardingProject />}
-        />
-        <Route
-          path="/tonysbigcheesepizzahomepage"
-          element={<TonysBigCheesePizzaHomepage />}
         />
         <Route 
           path="/responsiveredesign"

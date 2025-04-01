@@ -1,14 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 const ResponsiveRedesign: React.FC = () => {
   return (
     <div>
       <h1>Responsive Redesign</h1>
       <div className="projects-content">
-        <NavLink to="/tonysbigcheesepizzahomepage">
-          <a>tony's big cheese pizza</a>
-        </NavLink>
+        <a
+          href="/TonysBigCheesePizzaHomepage.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Tony's Big Cheese Pizza
+        </a>
       </div>
     </div>
   );
