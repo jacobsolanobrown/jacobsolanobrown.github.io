@@ -167,7 +167,6 @@ const Homepage: React.FC = () => {
           <a href="#about-me">about</a>
           <a href="#projects">projects</a>
           <a href="#contact">contact</a>
-          <p>KOYU</p>
         </div>
         <section id="about-me" className="about-me-section">
           <h1>about me</h1>
