@@ -8,6 +8,11 @@ import linkedinLogo from "../assets/linkedinlogo.svg";
 import linkicon from "../assets/linkicon.svg";
 import mountainImage from "../assets/mountain.jpeg";
 import pinkblur from "../assets/pink_blur.svg";
+import navyBlur from "../assets/navy_blur.svg";
+import ProjectCard from "../components/ProjectCard";
+import accessImage from "../assets/accessible-components-assets/ticketmaster_ui.png";
+import mcDonaldsImage from "../assets/persona-storyboarding-assets/mcdonald_logo.png";
+import tonysImage from "../assets/responsive-redesign-assets/TonysLogo.png";
 
 const Homepage: React.FC = () => {
   useEffect(() => {
@@ -173,7 +178,6 @@ const Homepage: React.FC = () => {
           <div className="pink-1">
             <img src={pinkblur} alt="" />
           </div>
-          {/* TODO: add  blue blur to the bottom right - do the same thing as you did with pink blur - seems to be responsive enough  */}
           <div className="about-me-card">
             <div className="about-me-text">
               <p>
@@ -197,31 +201,54 @@ const Homepage: React.FC = () => {
             <img
               src={mountainImage}
               alt="A photo of Mount Rainer covered in clouds."
-              style={{ width: "350px", height: "auto" }}
             />
+          </div>
+          <div className="navy-1">
+            <img src={navyBlur} alt="" />
           </div>
         </section>
         <section id="projects" className="project-section">
-          <div className="projects-header">
-            <h1>my projects</h1>
-          </div>
-          <div className="projects-content">
-            <NavLink to="/accessiblecomponentsproject">
-              <a>accessible components</a>
-              <img src={linkicon} alt="Blue icon for a link icon" />
-            </NavLink>
-          </div>
-          <div className="projects-content">
-            <NavLink to="/personastoryboardingproject">
-              <a>persona storyboarding</a>
-              <img src={linkicon} alt="Blue icon for a link icon" />
-            </NavLink>
-          </div>
-          <div className="projects-content">
-            <NavLink to="/responsiveredesign">
-              <a>responsive redesign</a>
-              <img src={linkicon} alt="Blue icon for a link icon" />
-            </NavLink>
+          <div className="project-list">
+            <div className="projects-header">
+              <h1>projects</h1>
+            </div>
+            <ProjectCard
+              title="Accessible Accordion Component Case Study"
+              text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+              image={accessImage}
+              tags={["UX", "Accessibility", "Case Study"]}
+            />
+            <ProjectCard
+              title="Understanding Users Through Personas and Storyboarding"
+              text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+              image={mcDonaldsImage}
+              tags={["UX", "Accessibility", "Case Study"]}
+            />
+            <ProjectCard
+              title="Tony’s Big Cheese Pizza: Responsive Redesign Case Study"
+              text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+              image={tonysImage}
+              tags={["UX", "Accessibility", "Case Study"]}
+            />
+            <div className="projects-content">
+              <NavLink to="/accessiblecomponentsproject">
+                <a>accessible components</a>
+                <img src={linkicon} alt="Blue icon for a link icon" />
+              </NavLink>
+            </div>
+            <div className="projects-content">
+              <NavLink to="/personastoryboardingproject">
+                <a>persona storyboarding</a>
+                <img src={linkicon} alt="Blue icon for a link icon" />
+              </NavLink>
+            </div>
+            <h1>case studies</h1>
+            <div className="projects-content">
+              <NavLink to="/responsiveredesign">
+                <a>responsive redesign</a>
+                <img src={linkicon} alt="Blue icon for a link icon" />
+              </NavLink>
+            </div>
           </div>
         </section>
         <section id="contact" className="contact-section">
