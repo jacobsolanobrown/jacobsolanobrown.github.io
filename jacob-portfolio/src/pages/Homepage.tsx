@@ -156,8 +156,6 @@ const Homepage: React.FC = () => {
                 <p>
                   and I’m a full-stack SWE who builds reliable systems with
                   precision, purpose, and a touch of childlike wonder.{" "}
-                  {/* <br />
-                and i like cats, among other things */}
                 </p>
               </div>
               <img
@@ -175,9 +173,7 @@ const Homepage: React.FC = () => {
         </div>
         <section id="about-me" className="about-me-section">
           <h1>about me</h1>
-          <div className="pink-1">
-            <img src={pinkblur} alt="" />
-          </div>
+          <div className="about-pink-blur"></div>
           <div className="about-me-card">
             <div className="about-me-text">
               <p>
@@ -203,34 +199,60 @@ const Homepage: React.FC = () => {
               alt="A photo of Mount Rainer covered in clouds."
             />
           </div>
-          <div className="navy-1">
-            <img src={navyBlur} alt="" />
-          </div>
+          <div className="about-blue-blur"></div>
         </section>
-        <section id="projects" className="project-section">
-          <div className="project-list">
-            <div className="projects-header">
-              <h1>projects</h1>
+        <section id="projects" className="project-section-outer">
+          <div className="project-section-inner">
+            <div className="gradient-bg">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur
+                      in="SourceGraphic"
+                      stdDeviation="10"
+                      result="blur"
+                    />
+                    <feColorMatrix
+                      in="blur"
+                      mode="matrix"
+                      values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                      result="goo"
+                    />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                  </filter>
+                </defs>
+              </svg>
+              <div className="gradient-container">
+                <div className="g1"></div>
+                <div className="g2"></div>
+                <div className="g3"></div>
+                <div className="g4"></div>
+                <div className="g5"></div>
+                <div className="g6"></div>
+                <div className="g7"></div>\{" "}
+              </div>
             </div>
-            <ProjectCard
-              title="Accessible Accordion Component Case Study"
-              text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
-              image={accessImage}
-              tags={["UX", "Accessibility", "Case Study"]}
-            />
-            <ProjectCard
-              title="Understanding Users Through Personas and Storyboarding"
-              text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
-              image={mcDonaldsImage}
-              tags={["UX", "Accessibility", "Case Study"]}
-            />
-            <ProjectCard
-              title="Tony’s Big Cheese Pizza: Responsive Redesign Case Study"
-              text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
-              image={tonysImage}
-              tags={["UX", "Accessibility", "Case Study"]}
-            />
-            <div className="projects-content">
+            <div className="project-list">
+              <h1>projects</h1>
+              <ProjectCard
+                title="Accessible Accordion Component Case Study"
+                text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+                image={accessImage}
+                tags={["UX", "Accessibility", "Case Study"]}
+              />
+              <ProjectCard
+                title="Understanding Users Through Personas and Storyboarding"
+                text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+                image={mcDonaldsImage}
+                tags={["UX", "Accessibility", "Case Study"]}
+              />
+              <ProjectCard
+                title="Tony’s Big Cheese Pizza: Responsive Redesign Case Study"
+                text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+                image={tonysImage}
+                tags={["UX", "Accessibility", "Case Study"]}
+              />
+              {/* <div className="projects-content">
               <NavLink to="/accessiblecomponentsproject">
                 <a>accessible components</a>
                 <img src={linkicon} alt="Blue icon for a link icon" />
@@ -241,51 +263,73 @@ const Homepage: React.FC = () => {
                 <a>persona storyboarding</a>
                 <img src={linkicon} alt="Blue icon for a link icon" />
               </NavLink>
-            </div>
-            <h1>case studies</h1>
-            <div className="projects-content">
+            </div> */}
+              {/* <div className="projects-content">
               <NavLink to="/responsiveredesign">
                 <a>responsive redesign</a>
                 <img src={linkicon} alt="Blue icon for a link icon" />
               </NavLink>
+            </div> */}
             </div>
           </div>
         </section>
         <section id="contact" className="contact-section">
-          <div className="contact-text">
-            <h1>contact me</h1>
-            <p>
-              <br />
-              Lets connect on LinkedIn or through email at{" "}
-              <a href="mailto:gilbert_solano@brown.edu">
-                gilbert_solano@brown.edu
-              </a>
-              !
-            </p>
-          </div>
-          <div className="contact-photo-links">
-            <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
-              <img
-                src={linkedinLogo}
-                alt="LinkedIn's Logo"
-                className="white-social-logo"
-                style={{ width: "100px", height: "auto" }}
-              />
-            </a>
-
-            <a href="https://github.com/jacobsolanobrown">
-              <img
-                src={githubLogo}
-                alt="Github's Logo"
-                className="white-social-logo"
-                style={{ width: "100px", height: "auto" }}
-              />
-            </a>
+          <div className="contact-frame">
+            <div className="contact-pink-blur"></div>
+            <h1>let's connect ^_^</h1>
+            <div className="contact-text-card">
+              <p>
+                Also connect with me on LinkedIn or through email at{" "}
+                <a href="mailto:gilbert_solano@brown.edu">
+                  gilbert_solano@brown.edu
+                </a>
+                !
+              </p>
+              <div className="contact-photo-links">
+                <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
+                  <img
+                    src={linkedinLogo}
+                    alt="LinkedIn's Logo"
+                    className="white-social-logo"
+                  />
+                </a>
+                <a href="https://github.com/jacobsolanobrown">
+                  <img
+                    src={githubLogo}
+                    alt="Github's Logo"
+                    className="white-social-logo"
+                  />
+                </a>
+              </div>
+              <p>Or send me a message with the form below.</p>
+            </div>
+            <hr className="contact-form-line" />
+            <div className="contact-me-form">
+              <form>
+                <label htmlFor="name">Full Name*</label>
+                <input type="text" id="name" name="name" placeholder="Name" />
+                <label htmlFor="email">E-mail Address*</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="E-mail"
+                />
+                <label htmlFor="message">Message (Optional)</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                ></textarea>
+                <button type="submit">submit</button>
+              </form>
+            </div>
+            <div className="contact-blue-blur"></div>
           </div>
         </section>
       </main>
       <footer>
-        <p>&copy; 2025 jacob solano</p>
+        <p>Designed and developed by yours truly &copy; jacob solano</p>
       </footer>
     </div>
   );
