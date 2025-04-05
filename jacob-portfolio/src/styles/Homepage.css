@@ -681,10 +681,6 @@ textarea {
   color: blue;
 }
 
-.projects-content a:hover img {
-  transform: translate(5px, -5px);
-}
-
 .projects-content a:hover {
   color: blue;
   text-decoration: underline;

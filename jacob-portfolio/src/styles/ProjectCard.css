@@ -59,6 +59,20 @@
   text-underline-position: from-font;
 }
 
+.project-card-title a:visited {
+  color: #000;
+}
+
+.project-card-title a:hover img {
+  transform: translate(5px, -5px);
+  
+}
+
+.project-card-title img {
+      filter: brightness(0); /* This turns it black */
+
+}
+
 .project-card-text {
   color: #000;
 

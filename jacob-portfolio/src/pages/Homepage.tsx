@@ -1,14 +1,11 @@
 import React from "react";
 import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import "../styles/Homepage.css";
 import catImage from "../assets/cat_duotone.png";
 import githubLogo from "../assets/githublogo.svg";
 import linkedinLogo from "../assets/linkedinlogo.svg";
-import linkicon from "../assets/linkicon.svg";
 import mountainImage from "../assets/mountain.jpeg";
-import pinkblur from "../assets/pink_blur.svg";
-import navyBlur from "../assets/navy_blur.svg";
 import ProjectCard from "../components/ProjectCard";
 import accessImage from "../assets/accessible-components-assets/ticketmaster_ui.png";
 import mcDonaldsImage from "../assets/persona-storyboarding-assets/mcdonald_logo.png";
@@ -239,18 +236,21 @@ const Homepage: React.FC = () => {
                 text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
                 image={accessImage}
                 tags={["UX", "Accessibility", "Case Study"]}
+                pageLink="/accessiblecomponentsproject"
               />
               <ProjectCard
                 title="Understanding Users Through Personas and Storyboarding"
                 text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
                 image={mcDonaldsImage}
                 tags={["UX", "Accessibility", "Case Study"]}
+                pageLink="/personastoryboardingproject"
               />
               <ProjectCard
                 title="Tony’s Big Cheese Pizza: Responsive Redesign Case Study"
                 text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
                 image={tonysImage}
                 tags={["UX", "Accessibility", "Case Study"]}
+                pageLink="/responsiveredesign"
               />
               {/* <div className="projects-content">
               <NavLink to="/accessiblecomponentsproject">
