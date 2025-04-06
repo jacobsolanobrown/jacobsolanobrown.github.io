@@ -176,11 +176,9 @@ const Homepage: React.FC = () => {
                 <p>hi, i am</p>
                 <h1>
                   <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
-                    jacob
-                    <br />
-                    solano
+                    jacob solano
+                    <img className="name-card-star" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADaklEQVR4nO2aX4hMcRTHz+7Kn0JCSWg9rL3n3Jnf75bV8uYRKZGWB4p4UKSERzVqw5wzu7Tl3+OuN/ukPPCEQnmgbEj5E0V5ovyPZVdnxpI0ZufO7P3due6nTk1zZ87vfM89v9+c+/sNQEpKSkpKSkpKhHS098w1xAMW+XXRSPr1Pfgf8P3cZEN8z5KM/mk8pNcg6Rjk3X+LL5leg2Qz2mSJH5ZPgDwCyDVDUjFUWFNO/C/zZTUkFUNyuVICDPIlSCIWe9otyfeKFUA8ksnkCZKGQT5dWfwvOwVJIghOzLIo78ebAIPy0fd7Z0NSsCQHq7j7JfP4ACSBLhhssSRPq02AQX6u34VGJ0DZUPXd/2lZ4vXQ6FiSa2ETYIivQuORa+7A4/MN8lKD+W1hxf+eCvlt6kt9Ou8SEY/OsVjIardmPNluiA9Z4pMW+YJBvmWIXxqU4VpF/+PXYbg0Bt/SMXVsjUFj0Zg0No2x7sIDkq1hFjJnhvwk6/OWuoi3xJu1O3MuqmrjkYAKm+qRgCH3YkInYajmBBjiT+6FhDPtKGuvAJS7roWENpS7tVeAL12NugZYTzbWnABFt6oM8Tf3osZnGmvdt9esl19lSd7FXjzyB+PzOpgIsu1iLcoL1yLLGvKrrMfLYCIJlvQuiOPCaJAfBN6xxRAFnsczdO8uNuJJruimC0R+wIFyzrl45POtrbmp4IbRJkN82NXPpEHu0xjANUafDJG/RidchgNfdkHD7/tRaDsIccMSn4gwAcchbhjiGxFOgesQJ7pgsEU7sAgT8HHlytwkiAtZ7RCjK/9SEry8gbhgqbAz6gRY4h0QFwzy2cgrAOUMxAVLcsdBBdyGONDW1jfFonyJPAEoX3TsOMz/5dHf/ZIFfr7TtX4wKHtCzWHit9aXvWrF1+HWgT1xaIAGqhcvFzOZnkVjPkpHaaGeLPvjUAH3qxD+LMDC2nK+9Jp+pooKuA+uMeM4Nyie6SH3+X5ueiV/Kxb2Tis+Yo9jYdXuE1xjK54Z8m2DPR3V+tVOz5Lc/KdvlMfgGouyv0xwb0rP7LUcaeea1Yf6KlNZ+8A9o00WpduSfP5Zlrox0p/NHplXrxHUl/ocO3ovTjuU7ljsBo3R2dY3M5M5Fkzkv7vUt46hm7ITNUZKSkpKSkpKCvwv/AAzUADzEN1SjgAAAABJRU5ErkJggg==" alt="star" style={{width: 32}}></img>
                   </a>
-                  ,
                 </h1>
                 <p>
                   and I’m a full-stack SWE who builds reliable systems with
@@ -291,10 +289,7 @@ const Homepage: React.FC = () => {
             </div>
             <hr className="contact-form-line" />
             <div className="contact-me-form">
-              <form
-                className="my-form"
-                onSubmit={handleFormSubmit}
-              >
+              <form className="my-form" onSubmit={handleFormSubmit}>
                 {/* Honeypot - used for spammers only reading the code */}
                 <input type="text" name="_honey" style={{ display: "none" }} />
 

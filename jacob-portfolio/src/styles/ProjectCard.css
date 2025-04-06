@@ -1,3 +1,10 @@
+.project-card:hover {
+  transform: scale(1.03);
+  z-index: 200;
+  box-shadow: 0px 10px 30px rgba(46, 41, 138, 0.2);
+  border-radius: 25px;
+}
+
 .project-card {
   display: flex;
   justify-content: flex-start;
@@ -7,6 +14,7 @@
   width: 100%;
   position: relative;
   overflow: visible;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card-image {
@@ -17,10 +25,16 @@
   z-index: 100;
 
   border-radius: 25px 0px 0px 25px;
-  /* background: rgba(252, 251, 248, 0.75); gradient background*/
+  border: 1px solid rgba(252, 250, 248, 0.5);
+  background: linear-gradient(
+    101deg,
+    rgba(252, 250, 248, 0.7) 80%,
+    rgba(252, 250, 248, 0.45) 92.52%
+  );
 
+  /* 
   background-color: var(--cream, #fcfaf8);
-  border: 1px solid var(--navy, #2e298a);
+  border: 1px solid var(--navy, #2e298a); */
 }
 
 .project-card-image img {
@@ -43,12 +57,19 @@
   z-index: 100;
 
   border-radius: 0px 25px 25px 0px;
-  border: 1px solid var(--navy, #2e298a);
-  background: rgba(252, 251, 248, 1);
+  /* border: 1px solid var(--navy, #2e298a);
+  background: rgba(252, 251, 248, 1); */
+
+  border: 1px solid rgba(252, 250, 248, 0.5);
+  background: linear-gradient(
+    101deg,
+    rgba(252, 250, 248, 0.7) 80%,
+    rgba(252, 250, 248, 0.45) 92.52%
+  );
 }
 
 .project-card-title {
-  color: #000;
+  color: #2e298a;
 
   font-family: "Clash Grotesk";
   font-size: 30px;
@@ -64,7 +85,7 @@
 }
 
 .project-card-title a:visited {
-  color: #000;
+  color: #2e298a;
 }
 
 .project-card-title a:hover img {
@@ -73,11 +94,13 @@
 }
 
 .project-card-title img {
-  filter: brightness(0); /* This turns it black */
+    /* matches the colors - to stack filters, make sure it follows the stacking order */
+    filter: brightness(0) invert(14%) sepia(67%) saturate(3410%) hue-rotate(239deg)
+        brightness(82%) contrast(95%);
 }
 
 .project-card-text {
-  color: #000;
+  color: #2e298a;
 
   font-family: "Helvetica Neue";
   font-size: 22px;
@@ -118,7 +141,7 @@
   right: -20px;
   top: 0;
 
-  background-color: #726EBF;;
+  background-color: #726ebf;
   filter: blur(125px);
 }
 
@@ -128,13 +151,16 @@
 
 .project-card.image-on-right .project-card-image {
   border-radius: 0px 25px 25px 0px;
+  z-index: 50;
 }
 
 .project-card.image-on-right .project-card-content {
   border-radius: 25px 0px 0px 25px;
+  z-index: 50;
 }
 
 .project-card.image-on-right .project-card-blue-blur {
   right: auto; /* Remove right positioning */
   left: -20px; /* Position on left side instead */
+  z-index: -1;
 }
