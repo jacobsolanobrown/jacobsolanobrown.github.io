@@ -269,19 +269,28 @@ const Homepage: React.FC = () => {
                 {/* Disable Captcha */}
                 <input type="hidden" name="_captcha" value="false" />
 
+                <input type="hidden" name="_next" value="javascript:alert('Success! Thank you for your message :-)')" />
+
                 <label htmlFor="name">Full Name*</label>
-                <input type="text" id="name" name="name" placeholder="Name" />
+                <input
+                  type="text"
+                  id="name"
+                  name="Name"
+                  placeholder="Name"
+                  required
+                />
                 <label htmlFor="email">E-mail Address*</label>
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="Email"
                   placeholder="E-mail"
+                  required
                 />
                 <label htmlFor="message">Message (Optional)</label>
                 <textarea
                   id="message"
-                  name="message"
+                  name="Message"
                   placeholder="Message"
                 ></textarea>
                 <button type="submit">submit</button>
