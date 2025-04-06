@@ -58,6 +58,38 @@ const Homepage: React.FC = () => {
     };
   }, []);
 
+  function handleFormSubmit(e: React.FormEvent<HTMLFormElement>): boolean {
+    // Prevent default form submission
+    e.preventDefault();
+
+    // Use a type-safe query to select the form element
+    const form = document.querySelector<HTMLFormElement>(".my-form");
+    if (!form) return false;
+
+    const formData = new FormData(form);
+    const url = "https://formsubmit.co/gjsolano04@gmail.com";
+
+    fetch(url, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response: Response) => {
+        if (response.ok) {
+          alert("Success! Thank you for your message :-)");
+          form.reset(); // Optionally reset the form
+        } else {
+          alert("Oops! Something went wrong.");
+        }
+      })
+      .catch((error: Error) => {
+        console.error(error);
+        alert("Oops! Something went wrong.");
+      });
+
+    // Return false to prevent the default form submission behavior
+    return false;
+  }
+
   return (
     <div>
       <svg>
@@ -260,16 +292,21 @@ const Homepage: React.FC = () => {
             <hr className="contact-form-line" />
             <div className="contact-me-form">
               <form
-                action="https://formsubmit.co/gjsolano04@gmail.com"
-                method="POST"
+                className="my-form"
+                onSubmit={handleFormSubmit}
               >
-                {/* Honeypot - used for spammers only reading the code*/}
+                {/* Honeypot - used for spammers only reading the code */}
                 <input type="text" name="_honey" style={{ display: "none" }} />
 
                 {/* Disable Captcha */}
                 <input type="hidden" name="_captcha" value="false" />
 
-                <input type="hidden" name="_next" value="javascript:alert('Success! Thank you for your message :-)')" />
+                {/* This value is used for the email's subject, so that you can quickly reply to submissions without having to edit the subject line each time. */}
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Portfolio Form Submission!"
+                ></input>
 
                 <label htmlFor="name">Full Name*</label>
                 <input
@@ -279,6 +316,7 @@ const Homepage: React.FC = () => {
                   placeholder="Name"
                   required
                 />
+
                 <label htmlFor="email">E-mail Address*</label>
                 <input
                   type="email"
@@ -287,12 +325,14 @@ const Homepage: React.FC = () => {
                   placeholder="E-mail"
                   required
                 />
+
                 <label htmlFor="message">Message (Optional)</label>
                 <textarea
                   id="message"
                   name="Message"
                   placeholder="Message"
                 ></textarea>
+
                 <button type="submit">submit</button>
               </form>
             </div>
