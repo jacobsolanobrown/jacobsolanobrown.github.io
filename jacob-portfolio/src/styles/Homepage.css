@@ -135,9 +135,9 @@ footer p {
 }
 
 :root {
-  --color-bg1: rgb(0, 0, 162);
+  --color-bg1: rgb(13, 13, 124);
   --color-bg2: rgb(159, 172, 221);
-  --color1: 255, 255, 255;
+  --color1: 252, 250, 248; 
   --color2: 221, 74, 255;
   --color3: 100, 220, 255;
   --color4: 200, 50, 50;
@@ -614,13 +614,13 @@ textarea {
 }
 
 .project-section-inner {
-  /* background: var(--cream, #fcfaf8); */
-  background: #2e298a;
+  background: var(--cream, #fcfaf8);
   color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  z-index: 100;
 
   /* gradient changes */
   position: relative;
@@ -640,6 +640,7 @@ textarea {
   gap: 64px;
   width: 100%;
   z-index: 100;
+  overflow: visible;
 
   border-radius: 50px;
   border: 1px solid var(--navy, #2e298a);
@@ -663,27 +664,6 @@ textarea {
   text-underline-offset: auto;
   text-underline-position: from-font;
   color: var(--navy, #2e298a);
-}
-
-.projects-content {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  font-size: 24px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.projects-content a:link,
-.projects-content a:visited {
-  text-decoration: none;
-  color: blue;
-}
-
-.projects-content a:hover {
-  color: blue;
-  text-decoration: underline;
 }
 
 .projects-content a {

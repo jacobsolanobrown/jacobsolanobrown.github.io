@@ -200,7 +200,7 @@ const Homepage: React.FC = () => {
         </section>
         <section id="projects" className="project-section-outer">
           <div className="project-section-inner">
-            <div className="gradient-bg">
+            {/* <div className="gradient-bg">
               <svg xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <filter id="goo">
@@ -228,7 +228,7 @@ const Homepage: React.FC = () => {
                 <div className="g6"></div>
                 <div className="g7"></div>\{" "}
               </div>
-            </div>
+            </div> */}
             <div className="project-list">
               <h1>projects</h1>
               <ProjectCard
@@ -244,6 +244,7 @@ const Homepage: React.FC = () => {
                 image={mcDonaldsImage}
                 tags={["UX", "Accessibility", "Case Study"]}
                 pageLink="/personastoryboardingproject"
+                imageOnRight={true}
               />
               <ProjectCard
                 title="Tony’s Big Cheese Pizza: Responsive Redesign Case Study"
@@ -252,24 +253,6 @@ const Homepage: React.FC = () => {
                 tags={["UX", "Accessibility", "Case Study"]}
                 pageLink="/responsiveredesign"
               />
-              {/* <div className="projects-content">
-              <NavLink to="/accessiblecomponentsproject">
-                <a>accessible components</a>
-                <img src={linkicon} alt="Blue icon for a link icon" />
-              </NavLink>
-            </div>
-            <div className="projects-content">
-              <NavLink to="/personastoryboardingproject">
-                <a>persona storyboarding</a>
-                <img src={linkicon} alt="Blue icon for a link icon" />
-              </NavLink>
-            </div> */}
-              {/* <div className="projects-content">
-              <NavLink to="/responsiveredesign">
-                <a>responsive redesign</a>
-                <img src={linkicon} alt="Blue icon for a link icon" />
-              </NavLink>
-            </div> */}
             </div>
           </div>
         </section>
@@ -305,7 +288,7 @@ const Homepage: React.FC = () => {
             </div>
             <hr className="contact-form-line" />
             <div className="contact-me-form">
-              <form>
+              <form action="https://formsubmit.co/gjsolano04@gmail.com" method="POST">
                 <label htmlFor="name">Full Name*</label>
                 <input type="text" id="name" name="name" placeholder="Name" />
                 <label htmlFor="email">E-mail Address*</label>

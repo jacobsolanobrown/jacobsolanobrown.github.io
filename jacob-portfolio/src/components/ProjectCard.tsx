@@ -9,6 +9,7 @@ interface ProjectCardProps {
   image: string;
   tags: string[];
   pageLink: string;
+  imageOnRight?: boolean; // optional prop with a default of false
 }
 
 // add a boolean making the image switch from right or left of the div that returns different stuff
@@ -18,16 +19,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   text,
   image,
   tags,
-  pageLink,
+  pageLink, 
+  imageOnRight = false, // default to false if not provided 
 }) => {
+    // We use CSS reversing to achieve image on the right effect
   return (
-    <div className="project-card">
+    // if 'image-on-right' is true then append image-on-right class, otherwise leave blank
+    <div className={`project-card ${imageOnRight ? "image-on-right" : ""}`}>
+      <div className="project-card-blue-blur"></div>
       <div className="project-card-image">
         <img src={image} alt={title} />
       </div>
       <div className="project-card-content">
-        {/* TODO: to title <img src={linkicon} alt="Blue icon for a link icon" /> */}
-
         <h2 className="project-card-title">
           <NavLink to={pageLink}>
             <a>
