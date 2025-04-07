@@ -152,6 +152,7 @@
 .project-card.image-on-right .project-card-image {
   border-radius: 0px 25px 25px 0px;
   z-index: 50;
+  
 }
 
 .project-card.image-on-right .project-card-content {

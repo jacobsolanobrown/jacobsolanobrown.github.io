@@ -7,6 +7,7 @@ import githubLogo from "../assets/githublogo.svg";
 import linkedinLogo from "../assets/linkedinlogo.svg";
 import mountainImage from "../assets/mountain.jpeg";
 import ProjectCard from "../components/ProjectCard";
+import { FadeInSection } from "../components/FadeInSection";
 import accessImage from "../assets/accessible-components-assets/ticketmaster_ui.png";
 import mcDonaldsImage from "../assets/persona-storyboarding-assets/mcdonald_logo.png";
 import tonysImage from "../assets/responsive-redesign-assets/TonysLogo.png";
@@ -91,7 +92,7 @@ const Homepage: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="entire-homepage">
       <svg>
         <filter id="grainy">
           {/* <feTurbulence type="turbulence" baseFrequency="0.6" /> */}
@@ -162,9 +163,9 @@ const Homepage: React.FC = () => {
               </svg>
               <div className="gradient-container">
                 <div className="g1"></div>
-                <div className="g2"></div>
+                {/* <div className="g2"></div> */}
                 <div className="g3"></div>
-                <div className="g4"></div>
+                {/* <div className="g4"></div> */}
                 <div className="g5"></div>
                 <div className="g6"></div>
                 <div className="g7"></div>
@@ -177,7 +178,12 @@ const Homepage: React.FC = () => {
                 <h1>
                   <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
                     jacob solano
-                    <img className="name-card-star" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADaklEQVR4nO2aX4hMcRTHz+7Kn0JCSWg9rL3n3Jnf75bV8uYRKZGWB4p4UKSERzVqw5wzu7Tl3+OuN/ukPPCEQnmgbEj5E0V5ovyPZVdnxpI0ZufO7P3due6nTk1zZ87vfM89v9+c+/sNQEpKSkpKSkpKhHS098w1xAMW+XXRSPr1Pfgf8P3cZEN8z5KM/mk8pNcg6Rjk3X+LL5leg2Qz2mSJH5ZPgDwCyDVDUjFUWFNO/C/zZTUkFUNyuVICDPIlSCIWe9otyfeKFUA8ksnkCZKGQT5dWfwvOwVJIghOzLIo78ebAIPy0fd7Z0NSsCQHq7j7JfP4ACSBLhhssSRPq02AQX6u34VGJ0DZUPXd/2lZ4vXQ6FiSa2ETYIivQuORa+7A4/MN8lKD+W1hxf+eCvlt6kt9Ou8SEY/OsVjIardmPNluiA9Z4pMW+YJBvmWIXxqU4VpF/+PXYbg0Bt/SMXVsjUFj0Zg0No2x7sIDkq1hFjJnhvwk6/OWuoi3xJu1O3MuqmrjkYAKm+qRgCH3YkInYajmBBjiT+6FhDPtKGuvAJS7roWENpS7tVeAL12NugZYTzbWnABFt6oM8Tf3osZnGmvdt9esl19lSd7FXjzyB+PzOpgIsu1iLcoL1yLLGvKrrMfLYCIJlvQuiOPCaJAfBN6xxRAFnsczdO8uNuJJruimC0R+wIFyzrl45POtrbmp4IbRJkN82NXPpEHu0xjANUafDJG/RidchgNfdkHD7/tRaDsIccMSn4gwAcchbhjiGxFOgesQJ7pgsEU7sAgT8HHlytwkiAtZ7RCjK/9SEry8gbhgqbAz6gRY4h0QFwzy2cgrAOUMxAVLcsdBBdyGONDW1jfFonyJPAEoX3TsOMz/5dHf/ZIFfr7TtX4wKHtCzWHit9aXvWrF1+HWgT1xaIAGqhcvFzOZnkVjPkpHaaGeLPvjUAH3qxD+LMDC2nK+9Jp+pooKuA+uMeM4Nyie6SH3+X5ueiV/Kxb2Tis+Yo9jYdXuE1xjK54Z8m2DPR3V+tVOz5Lc/KdvlMfgGouyv0xwb0rP7LUcaeea1Yf6KlNZ+8A9o00WpduSfP5Zlrox0p/NHplXrxHUl/ocO3ovTjuU7ljsBo3R2dY3M5M5Fkzkv7vUt46hm7ITNUZKSkpKSkpKCvwv/AAzUADzEN1SjgAAAABJRU5ErkJggg==" alt="star" style={{width: 32}}></img>
+                    <img
+                      className="name-card-star"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADaklEQVR4nO2aX4hMcRTHz+7Kn0JCSWg9rL3n3Jnf75bV8uYRKZGWB4p4UKSERzVqw5wzu7Tl3+OuN/ukPPCEQnmgbEj5E0V5ovyPZVdnxpI0ZufO7P3due6nTk1zZ87vfM89v9+c+/sNQEpKSkpKSkpKhHS098w1xAMW+XXRSPr1Pfgf8P3cZEN8z5KM/mk8pNcg6Rjk3X+LL5leg2Qz2mSJH5ZPgDwCyDVDUjFUWFNO/C/zZTUkFUNyuVICDPIlSCIWe9otyfeKFUA8ksnkCZKGQT5dWfwvOwVJIghOzLIo78ebAIPy0fd7Z0NSsCQHq7j7JfP4ACSBLhhssSRPq02AQX6u34VGJ0DZUPXd/2lZ4vXQ6FiSa2ETYIivQuORa+7A4/MN8lKD+W1hxf+eCvlt6kt9Ou8SEY/OsVjIardmPNluiA9Z4pMW+YJBvmWIXxqU4VpF/+PXYbg0Bt/SMXVsjUFj0Zg0No2x7sIDkq1hFjJnhvwk6/OWuoi3xJu1O3MuqmrjkYAKm+qRgCH3YkInYajmBBjiT+6FhDPtKGuvAJS7roWENpS7tVeAL12NugZYTzbWnABFt6oM8Tf3osZnGmvdt9esl19lSd7FXjzyB+PzOpgIsu1iLcoL1yLLGvKrrMfLYCIJlvQuiOPCaJAfBN6xxRAFnsczdO8uNuJJruimC0R+wIFyzrl45POtrbmp4IbRJkN82NXPpEHu0xjANUafDJG/RidchgNfdkHD7/tRaDsIccMSn4gwAcchbhjiGxFOgesQJ7pgsEU7sAgT8HHlytwkiAtZ7RCjK/9SEry8gbhgqbAz6gRY4h0QFwzy2cgrAOUMxAVLcsdBBdyGONDW1jfFonyJPAEoX3TsOMz/5dHf/ZIFfr7TtX4wKHtCzWHit9aXvWrF1+HWgT1xaIAGqhcvFzOZnkVjPkpHaaGeLPvjUAH3qxD+LMDC2nK+9Jp+pooKuA+uMeM4Nyie6SH3+X5ueiV/Kxb2Tis+Yo9jYdXuE1xjK54Z8m2DPR3V+tVOz5Lc/KdvlMfgGouyv0xwb0rP7LUcaeea1Yf6KlNZ+8A9o00WpduSfP5Zlrox0p/NHplXrxHUl/ocO3ovTjuU7ljsBo3R2dY3M5M5Fkzkv7vUt46hm7ITNUZKSkpKSkpKCvwv/AAzUADzEN1SjgAAAABJRU5ErkJggg=="
+                      alt="star"
+                      style={{ width: 32 }}
+                    ></img>
                   </a>
                 </h1>
                 <p>
@@ -198,142 +204,161 @@ const Homepage: React.FC = () => {
           <a href="#projects">projects</a>
           <a href="#contact">contact</a>
         </div>
-        <section id="about-me" className="about-me-section">
-          <h1>about me</h1>
-          <div className="about-pink-blur"></div>
-          <div className="about-me-card">
-            <div className="about-me-text">
-              <p>
-                <br />
-                Hello! My name is Jacob Solano and I am a student at Brown
-                University pursuing a degree in Computer Science. I’m driven by
-                curiosity and creativity, and I aspire to be in a career where I
-                can solve real-world problems through clean, thoughtful
-                engineering.
-                <br />
-                <br />
-                I’ve worked with Java, Python, C, JavaScript/TypeScript,
-                Node.js, and more, gaining experience across the stack in both
-                academic and personal projects.
-                <br />
-                <br />
-                Outside of code, I make music, play my Nintendo 3DS, color to
-                unwind, and spend too much time thinking about my cat.
-              </p>
-            </div>
-            <img
-              src={mountainImage}
-              alt="A photo of Mount Rainer covered in clouds."
-            />
-          </div>
-          <div className="about-blue-blur"></div>
-        </section>
-        <section id="projects" className="project-section-outer">
-          <div className="project-section-inner">
-            <div className="project-list">
-              <h1>projects</h1>
-              <ProjectCard
-                title="Accessible Accordion Component Case Study"
-                text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
-                image={accessImage}
-                tags={["UX", "Accessibility", "Case Study"]}
-                pageLink="/accessiblecomponentsproject"
-              />
-              <ProjectCard
-                title="Understanding Users Through Personas and Storyboarding"
-                text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
-                image={mcDonaldsImage}
-                tags={["UX", "Accessibility", "Case Study"]}
-                pageLink="/personastoryboardingproject"
-                imageOnRight={true}
-              />
-              <ProjectCard
-                title="Tony’s Big Cheese Pizza: Responsive Redesign Case Study"
-                text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
-                image={tonysImage}
-                tags={["UX", "Accessibility", "Case Study"]}
-                pageLink="/responsiveredesign"
-              />
-            </div>
-          </div>
-        </section>
-        <section id="contact" className="contact-section">
-          <div className="contact-frame">
-            <div className="contact-pink-blur"></div>
-            <h1>let's connect ^_^</h1>
-            <div className="contact-text-card">
-              <p>
-                Also connect with me on LinkedIn or through email at{" "}
-                <a href="mailto:gilbert_solano@brown.edu">
-                  gilbert_solano@brown.edu
-                </a>
-                !
-              </p>
-              <div className="contact-photo-links">
-                <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
-                  <img
-                    src={linkedinLogo}
-                    alt="LinkedIn's Logo"
-                    className="white-social-logo"
-                  />
-                </a>
-                <a href="https://github.com/jacobsolanobrown">
-                  <img
-                    src={githubLogo}
-                    alt="Github's Logo"
-                    className="white-social-logo"
-                  />
-                </a>
+
+        <FadeInSection>
+          <section id="about-me" className="about-me-section">
+            <h1>about me</h1>
+            <div className="about-pink-blur"></div>
+            <div className="about-me-card">
+              <div className="about-me-text">
+                <p>
+                  <br />
+                  Hello! My name is Jacob Solano and I am a student at Brown
+                  University pursuing a degree in Computer Science. I’m driven
+                  by curiosity and creativity, and I aspire to be in a career
+                  where I can solve real-world problems through clean,
+                  thoughtful engineering.
+                  <br />
+                  <br />
+                  I’ve worked with Java, Python, C, JavaScript/TypeScript,
+                  Node.js, and more, gaining experience across the stack in both
+                  academic and personal projects.
+                  <br />
+                  <br />
+                  Outside of code, I make music, play my Nintendo 3DS, color to
+                  unwind, and spend too much time thinking about my cat.
+                </p>
               </div>
-              <p>Or send me a message with the form below.</p>
+              <img
+                src={mountainImage}
+                alt="A photo of Mount Rainer covered in clouds."
+              />
             </div>
-            <hr className="contact-form-line" />
-            <div className="contact-me-form">
-              <form className="my-form" onSubmit={handleFormSubmit}>
-                {/* Honeypot - used for spammers only reading the code */}
-                <input type="text" name="_honey" style={{ display: "none" }} />
+            <div className="about-blue-blur"></div>
+          </section>
+        </FadeInSection>
 
-                {/* Disable Captcha */}
-                <input type="hidden" name="_captcha" value="false" />
-
-                {/* This value is used for the email's subject, so that you can quickly reply to submissions without having to edit the subject line each time. */}
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="New Portfolio Form Submission!"
-                ></input>
-
-                <label htmlFor="name">Full Name*</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="Name"
-                  placeholder="Name"
-                  required
-                />
-
-                <label htmlFor="email">E-mail Address*</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="Email"
-                  placeholder="E-mail"
-                  required
-                />
-
-                <label htmlFor="message">Message (Optional)</label>
-                <textarea
-                  id="message"
-                  name="Message"
-                  placeholder="Message"
-                ></textarea>
-
-                <button type="submit">submit</button>
-              </form>
+        <FadeInSection>
+          <section id="projects" className="project-section-outer">
+            <div className="project-section-inner">
+              <div className="project-list">
+                <h1>projects</h1>
+                <FadeInSection delay={100}>
+                  <ProjectCard
+                    title="Accessible Accordion Component Case Study"
+                    text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+                    image={accessImage}
+                    tags={["UX", "Accessibility", "Case Study"]}
+                    pageLink="/accessiblecomponentsproject"
+                  />
+                </FadeInSection>
+                <FadeInSection delay={200}>
+                  <ProjectCard
+                    title="Understanding Users Through Personas and Storyboarding"
+                    text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+                    image={mcDonaldsImage}
+                    tags={["UX", "Accessibility", "Case Study"]}
+                    pageLink="/personastoryboardingproject"
+                    imageOnRight={true}
+                  />
+                </FadeInSection>
+                <FadeInSection delay={250}>
+                  <ProjectCard
+                    title="Tony’s Big Cheese Pizza: Responsive Redesign Case Study"
+                    text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+                    image={tonysImage}
+                    tags={["UX", "Accessibility", "Case Study"]}
+                    pageLink="/responsiveredesign"
+                  />
+                </FadeInSection>
+              </div>
             </div>
-            <div className="contact-blue-blur"></div>
-          </div>
-        </section>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection delay={300}>
+          <section id="contact" className="contact-section">
+            <div className="contact-frame">
+              <div className="contact-pink-blur"></div>
+              <h1>let's connect ^_^</h1>
+              <div className="contact-text-card">
+                <p>
+                  You can connect with me on LinkedIn or through email at{" "}
+                  <a href="mailto:gilbert_solano@brown.edu">
+                    gilbert_solano@brown.edu
+                  </a>
+                  !
+                </p>
+                <div className="contact-photo-links">
+                  <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
+                    <img
+                      src={linkedinLogo}
+                      alt="LinkedIn's Logo"
+                      className="white-social-logo"
+                    />
+                  </a>
+                  <a href="https://github.com/jacobsolanobrown">
+                    <img
+                      src={githubLogo}
+                      alt="Github's Logo"
+                      className="white-social-logo"
+                    />
+                  </a>
+                </div>
+                <p>Or send me a message with the form below.</p>
+              </div>
+              <hr className="contact-form-line" />
+              <div className="contact-me-form">
+                <form className="my-form" onSubmit={handleFormSubmit}>
+                  {/* Honeypot - used for spammers only reading the code */}
+                  <input
+                    type="text"
+                    name="_honey"
+                    style={{ display: "none" }}
+                  />
+
+                  {/* Disable Captcha */}
+                  <input type="hidden" name="_captcha" value="false" />
+
+                  {/* This value is used for the email's subject, so that you can quickly reply to submissions without having to edit the subject line each time. */}
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Portfolio Form Submission!"
+                  ></input>
+
+                  <label htmlFor="name">Full Name*</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="Name"
+                    placeholder="Name"
+                    required
+                  />
+
+                  <label htmlFor="email">E-mail Address*</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    placeholder="E-mail"
+                    required
+                  />
+
+                  <label htmlFor="message">Message (Optional)</label>
+                  <textarea
+                    id="message"
+                    name="Message"
+                    placeholder="Message"
+                  ></textarea>
+
+                  <button type="submit">submit</button>
+                </form>
+              </div>
+              <div className="contact-blue-blur"></div>
+            </div>
+          </section>
+        </FadeInSection>
       </main>
       <footer>
         <p>Designed and developed by yours truly &copy; jacob solano</p>
