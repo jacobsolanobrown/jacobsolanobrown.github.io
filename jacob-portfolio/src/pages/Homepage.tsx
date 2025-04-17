@@ -1,7 +1,7 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 // import { NavLink } from "react-router-dom";
-import "../styles/Homepage.css";
+import "../styles/pages/Homepage.css";
 import catImage from "../assets/cat_duotone.png";
 import githubLogo from "../assets/githublogo.svg";
 import linkedinLogo from "../assets/linkedinlogo.svg";
@@ -13,6 +13,14 @@ import mcDonaldsImage from "../assets/persona-storyboarding-assets/mcdonald_logo
 import tonysImage from "../assets/responsive-redesign-assets/TonysLogo.png";
 
 const Homepage: React.FC = () => {
+  // Add state for mobile menu
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Toggle mobile menu function
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   useEffect(() => {
     const mouseBubble = document.querySelector<HTMLDivElement>(".interaction")!;
     let curX = 0;
@@ -187,8 +195,8 @@ const Homepage: React.FC = () => {
                   </a>
                 </h1>
                 <p>
-                  and I’m a full-stack SWE who builds reliable systems with
-                  precision, purpose, and a touch of childlike wonder.{" "}
+                  and I'm a full-stack SWE who builds reliable systems with
+                  precision, purpose, and a touch of childlike wonder{" "}
                 </p>
               </div>
               <img
@@ -199,10 +207,44 @@ const Homepage: React.FC = () => {
             </div>
           </div>
         </section>
-        <div className="nav-box">
-          <a href="#about-me">about</a>
-          <a href="#projects">projects</a>
-          <a href="#contact">contact</a>
+        {/* Desktop Navigation */}
+        <div className="desktop-nav">
+          <div className="nav-box">
+            <a href="#landing-page">home</a>
+            <a href="#about-me">about</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="mobile-nav">
+          <button
+            className="hamburger-button"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle navigation menu"
+          >
+            <div className={`hamburger ${mobileMenuOpen ? "open" : ""}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+
+          <div className={`accordion-menu ${mobileMenuOpen ? "open" : ""}`}>
+            <a href="#landing-page" onClick={toggleMobileMenu}>
+              home
+            </a>
+            <a href="#about-me" onClick={toggleMobileMenu}>
+              about
+            </a>
+            <a href="#projects" onClick={toggleMobileMenu}>
+              projects
+            </a>
+            <a href="#contact" onClick={toggleMobileMenu}>
+              contact
+            </a>
+          </div>
         </div>
 
         <FadeInSection>
@@ -214,13 +256,13 @@ const Homepage: React.FC = () => {
                 <p>
                   <br />
                   Hello! My name is Jacob Solano and I am a student at Brown
-                  University pursuing a degree in Computer Science. I’m driven
+                  University pursuing a degree in Computer Science. I'm driven
                   by curiosity and creativity, and I aspire to be in a career
                   where I can solve real-world problems through clean,
                   thoughtful engineering.
                   <br />
                   <br />
-                  I’ve worked with Java, Python, C, JavaScript/TypeScript,
+                  I've worked with Java, Python, C, JavaScript/TypeScript,
                   Node.js, and more, gaining experience across the stack in both
                   academic and personal projects.
                   <br />
@@ -240,38 +282,37 @@ const Homepage: React.FC = () => {
 
         <FadeInSection>
           <section id="projects" className="project-section-outer">
-            <div className="project-section-inner">
-              <div className="project-list">
-                <h1>projects</h1>
-                <FadeInSection delay={100}>
-                  <ProjectCard
-                    title="Accessible Accordion Component Case Study"
-                    text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
-                    image={accessImage}
-                    tags={["UX", "Accessibility", "Case Study"]}
-                    pageLink="/accessiblecomponentsproject"
-                  />
-                </FadeInSection>
-                <FadeInSection delay={200}>
-                  <ProjectCard
-                    title="Understanding Users Through Personas and Storyboarding"
-                    text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
-                    image={mcDonaldsImage}
-                    tags={["UX", "Accessibility", "Case Study"]}
-                    pageLink="/personastoryboardingproject"
-                    imageOnRight={true}
-                  />
-                </FadeInSection>
-                <FadeInSection delay={250}>
-                  <ProjectCard
-                    title="Tony’s Big Cheese Pizza: Responsive Redesign Case Study"
-                    text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
-                    image={tonysImage}
-                    tags={["UX", "Accessibility", "Case Study"]}
-                    pageLink="/responsiveredesign"
-                  />
-                </FadeInSection>
-              </div>
+            <div className="project-list">
+              <h1>projects</h1>
+
+              <FadeInSection delay={100}>
+                <ProjectCard
+                  title="Accessible Accordion Component Case Study"
+                  text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+                  image={accessImage}
+                  tags={["UX", "Accessibility", "Case Study"]}
+                  pageLink="/accessiblecomponentsproject"
+                />
+              </FadeInSection>
+              <FadeInSection delay={200}>
+                <ProjectCard
+                  title="Understanding Users Through Personas and Storyboarding"
+                  text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+                  image={mcDonaldsImage}
+                  tags={["UX", "Accessibility", "Case Study"]}
+                  pageLink="/personastoryboardingproject"
+                  imageOnRight={true}
+                />
+              </FadeInSection>
+              <FadeInSection delay={250}>
+                <ProjectCard
+                  title="Tony's Big Cheese Pizza: Responsive Redesign Case Study"
+                  text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
+                  image={tonysImage}
+                  tags={["UX", "Accessibility", "Case Study"]}
+                  pageLink="/responsiveredesign"
+                />
+              </FadeInSection>
             </div>
           </section>
         </FadeInSection>
@@ -283,11 +324,7 @@ const Homepage: React.FC = () => {
               <h1>let's connect ^_^</h1>
               <div className="contact-text-card">
                 <p>
-                  You can connect with me on LinkedIn or through email at{" "}
-                  <a href="mailto:gilbert_solano@brown.edu">
-                    gilbert_solano@brown.edu
-                  </a>
-                  !
+                  You can connect with me on LinkedIn!
                 </p>
                 <div className="contact-photo-links">
                   <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
@@ -305,7 +342,7 @@ const Homepage: React.FC = () => {
                     />
                   </a>
                 </div>
-                <p>Or send me a message with the form below.</p>
+                  <p>Or send me a message with the form below.</p>
               </div>
               <hr className="contact-form-line" />
               <div className="contact-me-form">

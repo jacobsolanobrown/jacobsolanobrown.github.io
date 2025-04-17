@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/PersonaStoryboardPage.css";
+import "../styles/pages/PersonaStoryboardPage.css";
 import McdonaldsLogo from "../assets/persona-storyboarding-assets/mcdonald_logo.png";
 import LoginScreen from "../assets/persona-storyboarding-assets/mc_login_screen.png";
 import MenuScreen from "../assets/persona-storyboarding-assets/mc_menu_screen.png";
@@ -9,7 +9,6 @@ import OlderPersonEmpathyMap from "../assets/persona-storyboarding-assets/older_
 import SquareStory1_3 from "..//assets/persona-storyboarding-assets/square-story-1-3.png";
 import SquareStory4_6 from "../assets/persona-storyboarding-assets/square-story-4-6.png";
 import SquareStory7_9 from "../assets/persona-storyboarding-assets/square-story-7-9.png";
-
 
 const PersonaStoryboardingProject: React.FC = () => {
   return (
@@ -65,7 +64,7 @@ const PersonaStoryboardingProject: React.FC = () => {
             <h4>Landing Screen:</h4>
             <ul>
               <li>Skip Login Button: Directly takes users to the menu.</li>
-              <li>Login Button: Directs to McDonald’s account login screen.</li>
+              <li>Login Button: Directs to McDonald's account login screen.</li>
             </ul>
             <h4>Menu Screen:</h4>
             <ul>
@@ -204,7 +203,7 @@ const PersonaStoryboardingProject: React.FC = () => {
             <h4>Old Geezer: Rory</h4>
             <p>
               This persona, Rory, represents older users challenged by the
-              interface’s small text and anxiety around payment options. They
+              interface's small text and anxiety around payment options. They
               are retired and have a fixed income, so they rarely eat outside of
               home.
             </p>
@@ -218,10 +217,10 @@ const PersonaStoryboardingProject: React.FC = () => {
       <div id="04" className="storyboard-container">
         <h2>Storyboarding</h2>
         <p>
-          Lastly, to better visualize and empathize with the user’s experience,
-          I used storyboarding to illustrate a user’s interaction with the
-          interface. The storyboard below captures Rory’s journey, one of the
-          personas I created, as they navigate through the McDonald’s
+          Lastly, to better visualize and empathize with the user's experience,
+          I used storyboarding to illustrate a user's interaction with the
+          interface. The storyboard below captures Rory's journey, one of the
+          personas I created, as they navigate through the McDonald's
           self-service kiosk from the moment they approach until they
           successfully complete their order.
         </p>

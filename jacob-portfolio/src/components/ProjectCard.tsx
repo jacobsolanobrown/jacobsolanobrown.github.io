@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/ProjectCard.css";
+import "../styles/components/ProjectCard.css";
 import { NavLink } from "react-router-dom";
 import linkicon from "../assets/linkicon.svg";
 
@@ -19,14 +19,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   text,
   image,
   tags,
-  pageLink, 
-  imageOnRight = false, // default to false if not provided 
+  pageLink,
+  imageOnRight = false, // default to false if not provided
 }) => {
-    // We use CSS reversing to achieve image on the right effect
+  // We use CSS reversing to achieve image on the right effect
   return (
     // if 'image-on-right' is true then append image-on-right class, otherwise leave blank
     <div className={`project-card ${imageOnRight ? "image-on-right" : ""}`}>
       <div className="project-card-blue-blur"></div>
+      <div className="project-card-blue-blur2"></div>
+
       <div className="project-card-image">
         <img src={image} alt={title} />
       </div>

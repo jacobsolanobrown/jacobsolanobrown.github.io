@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/ResponsiveRedesign.css";
+import "../styles/pages/ResponsiveRedesign.css";
 import tonysLogo from "../assets/responsive-redesign-assets/TonysLogo.png";
 import websiteScreenshot from "../assets/responsive-redesign-assets/tonysWebsiteScreenshot.png";
 import figmaStyle from "../assets/responsive-redesign-assets/figmaStyleGuide.png";
@@ -21,7 +21,7 @@ const ResponsiveRedesign: React.FC = () => {
       </div>
       <div className="title-container">
         <div className="title-text">
-          <h1>Tony’s Big Cheese Pizza: Responsive Redesign Case Study</h1>
+          <h1>Tony's Big Cheese Pizza: Responsive Redesign Case Study</h1>
           <h3>CSCI1300: Interaction Design</h3>
         </div>
         <img src={tonysLogo} alt="mcdonald's logo in yellow" />
@@ -29,7 +29,7 @@ const ResponsiveRedesign: React.FC = () => {
       <div id="01" className="intro-container">
         <h2>Introduction</h2>
         <p>
-          Tony’s Big Cheese Pizza is a popular pizzeria in my hometown (Yakima,
+          Tony's Big Cheese Pizza is a popular pizzeria in my hometown (Yakima,
           Washington) that gets significant traffic. Despite their good, cheap
           pizza, their current website lacks usability and accessibility, often
           leading customers (myself included) to prefer ordering by phone. This
@@ -48,7 +48,7 @@ const ResponsiveRedesign: React.FC = () => {
         />
         <h3>Why This Website?</h3>
         <p>
-          Tony’s Pizza is a popular local pizzeria with significant web traffic,
+          Tony's Pizza is a popular local pizzeria with significant web traffic,
           but usability issues on their website frequently drive customers to
           order by phone instead.
         </p>
@@ -83,7 +83,7 @@ const ResponsiveRedesign: React.FC = () => {
         <p>
           Images lacked helpful alt text, and the black-on-red color combination
           failed contrast checks, making the text difficult for visually
-          impaired users. WebAIM’s WAVE accurately identified these critical
+          impaired users. WebAIM's WAVE accurately identified these critical
           accessibility issues, confirming the need for improved color contrast
           and clear alt text.
         </p>
@@ -98,10 +98,10 @@ const ResponsiveRedesign: React.FC = () => {
               Typography
               <ul>
                 <li>
-                  Headers: “Righteous,” bold, clearly scaled by device size.
+                  Headers: "Righteous," bold, clearly scaled by device size.
                 </li>
                 <li>
-                  Body: “Montserrat,” regular weight, optimized for readability.
+                  Body: "Montserrat," regular weight, optimized for readability.
                 </li>
               </ul>
             </li>
@@ -184,7 +184,9 @@ const ResponsiveRedesign: React.FC = () => {
             </li>
             <li>
               Interactions: Defined default and hover states for buttons. Also
-              configured a hamburger icon for when the nav bar was too large. (Although in the final deployed redesign, it is soley for visual purposes and not functional)
+              configured a hamburger icon for when the nav bar was too large.
+              (Although in the final deployed redesign, it is soley for visual
+              purposes and not functional)
             </li>
           </ul>
         </div>
@@ -213,14 +215,14 @@ const ResponsiveRedesign: React.FC = () => {
           visual hierarchy to make key information instantly accessible,
           improving accessibility through descriptive alt-text and better color
           contrast, and ensuring a responsive, enjoyable ordering experience
-          across all devices. 
+          across all devices.
           <br />
           <br />
-          This
-          project taught me the power of empathetic design; by thoughtfully
-          addressing usability and accessibility, I transformed Tony’s Pizza’s
+          This project taught me the power of empathetic design; by thoughtfully
+          addressing usability and accessibility, I transformed Tony's Pizza's
           online presence into an inviting, inclusive, and delightful
-          experience! Something that is as enjoyable as their pizza itself! (seriously)
+          experience! Something that is as enjoyable as their pizza itself!
+          (seriously)
         </p>
         <NavLink to="/">{"<"} Back to the Home Page</NavLink>
       </div>

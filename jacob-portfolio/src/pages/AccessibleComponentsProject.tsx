@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/AccessibleComponentsPage.css";
+import "../styles/pages/AccessibleComponentsPage.css";
 
 const AccessibleComponentsProject: React.FC = () => {
   return (
@@ -68,7 +68,7 @@ const AccessibleComponentsProject: React.FC = () => {
               Beyond analysis, this project also explores potential improvements
               to the component by designing a revised version that enhances
               usability/accessibility for certain users. Through state models
-              and annotated designs, we’ll propose intentional trade-offs that
+              and annotated designs, we'll propose intentional trade-offs that
               balance functionality and accessibility.
             </p>
           </div>
@@ -221,7 +221,7 @@ const AccessibleComponentsProject: React.FC = () => {
               applications, we can now better understand how different
               interactions impact the overall user experience. By examining how
               users engage with these applicaitons, we learn how certain design
-              choices either support or hinder the user’s ability to learn how
+              choices either support or hinder the user's ability to learn how
               to navigate the interface (learnability), perform tasks
               efficiently (efficiency), and retain that knowledge over time
               (memorability).
@@ -375,7 +375,7 @@ const AccessibleComponentsProject: React.FC = () => {
               both mouse and keyboard interactions, we can identify points of
               friction and potential improvements in accessibility and
               efficiency. In this section, we will focus on redesigning
-              Ticketmaster’s accordion component to enhance usability while
+              Ticketmaster's accordion component to enhance usability while
               considering intentional trade-offs, given Ticketmaster's initial
               state models.
             </p>

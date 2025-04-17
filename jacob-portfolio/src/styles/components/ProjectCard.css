@@ -1,0 +1,178 @@
+/* ==========================================================================
+   Project Card Component
+   ========================================================================== */
+@import "../shared/variables.css";
+
+/* Base Card Styles */
+.project-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+  align-self: stretch;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  background-color: rgb(252, 250, 248, 0.5);
+  transition: transform 0.6s ease-out, box-shadow 0.6s ease-out,
+    background-color 0.8s ease-in-out;
+  /* box-shadow: 0px 0px 30px 10px rgba(46, 41, 255, 0.4); */
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  z-index: 200;
+  box-shadow: 0px 0px 90px 5px #f3d7f7;
+  border-radius: var(--border-radius-md);
+  background-color: rgba(253, 215, 255, 0.2);
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out,
+    background-color 0.8s ease-in-out;
+}
+
+/* Image Container */
+.project-card-image {
+  width: 30%;
+  min-width: 200px;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  border-radius: var(--border-radius-md) 0px 0px var(--border-radius-md);
+}
+
+.project-card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Content Container */
+.project-card-content {
+  display: flex;
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-lg)
+    var(--spacing-lg);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  flex: 1;
+  z-index: 100;
+  border-radius: 0px var(--border-radius-md) var(--border-radius-md) 0px;
+}
+
+/* Title Styles */
+.project-card-title {
+  color: var(--color-primary);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-md);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.project-card-title a:visited {
+  color: #2e298a;
+}
+
+.project-card-title a:hover img {
+  transform: translate(5px, -5px);
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-card-title img {
+  filter: brightness(0) invert(14%) sepia(67%) saturate(3410%)
+    hue-rotate(239deg) brightness(82%) contrast(95%);
+}
+
+/* Text Styles */
+.project-card-text {
+  color: #2e298a;
+  font-family: "Helvetica Neue";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Tags Container */
+.project-card-tags {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.project-card-tag {
+  display: flex;
+  padding: var(--spacing-xs) var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Decorative Elements */
+.project-card-blue-blur {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  right: 0%;
+  top: 10%;
+  background-color: rgba(88, 120, 248, 0.3);
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.project-card-blue-blur2 {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  left: 0%;
+  top: 10%;
+  background-color: rgba(189, 128, 239, 0.3);
+  filter: blur(80px);
+  z-index: -1;
+}
+
+/* Right Image Variant */
+.project-card.image-on-right {
+  flex-direction: row-reverse;
+}
+
+.project-card.image-on-right .project-card-image {
+  border-radius: 0px var(--border-radius-md) var(--border-radius-md) 0px;
+  z-index: 50;
+}
+
+.project-card.image-on-right .project-card-content {
+  border-radius: var(--border-radius-md) 0px 0px var(--border-radius-md);
+  z-index: 50;
+}
+
+.project-card.image-on-right .project-card-blue-blur {
+  right: auto;
+  left: 0%;
+  z-index: -1;
+}
+
+.project-card.image-on-right .project-card-blue-blur2 {
+  left: auto;
+  right: 0%;
+  z-index: -1;
+}
