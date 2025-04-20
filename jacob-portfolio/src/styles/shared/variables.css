@@ -28,7 +28,7 @@
   --spacing-sm: 20px;
   --spacing-md: 24px;
   --spacing-lg: 40px;
-  --spacing-xl: 96px;
+  --spacing-xl: 64px;
 
   /* border radius */
   --border-radius-sm: 15px;
@@ -37,9 +37,11 @@
 
   /* typography */
   --font-family-primary: "Clash Grotesk", sans-serif;
+  --font-size-xs: 16px;
   --font-size-sm: 20px;
-  --font-size-md: 28px;
-
+  --font-size-md: 24px;
+  --font-size-lg: 28px;
+  --font-size-title: 36px;
   /* animations */
   --transition-default: 0.2s ease-out;
   --animation-spin: spin 5s linear infinite;

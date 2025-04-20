@@ -28,26 +28,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <div className={`project-card ${imageOnRight ? "image-on-right" : ""}`}>
       <div className="project-card-blue-blur"></div>
       <div className="project-card-blue-blur2"></div>
-
-      <div className="project-card-image">
-        <img src={image} alt={title} />
-      </div>
-      <div className="project-card-content">
-        <h2 className="project-card-title">
-          <NavLink to={pageLink}>
-            <a>
-              {title}
-              <img src={linkicon} alt="Blue icon for a link icon" />
-            </a>
-          </NavLink>
-        </h2>
-        <p className="project-card-text">{text}</p>
-        <div className="project-card-tags">
-          {tags.map((tag, index) => (
-            <span key={index} className="project-card-tag">
-              {tag}
-            </span>
-          ))}
+        <div className="project-card-image">
+          <img src={image} alt={title} />
+        </div>
+        <div className="project-card-content">
+          <h2 className="project-card-title">
+            <NavLink to={pageLink}>
+              <a>
+                {title}
+                <img src={linkicon} alt="Blue icon for a link icon" />
+              </a>
+            </NavLink>
+          </h2>
+          <p className="project-card-text">{text}</p>
+          <div className="project-card-tags">
+            {tags.map((tag, index) => (
+              <span key={index} className="project-card-tag">
+                {tag}
+              </span>
+            ))}
         </div>
       </div>
     </div>

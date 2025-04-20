@@ -8,9 +8,9 @@ import linkedinLogo from "../assets/linkedinlogo.svg";
 import mountainImage from "../assets/mountain.jpeg";
 import ProjectCard from "../components/ProjectCard";
 import { FadeInSection } from "../components/FadeInSection";
-import accessImage from "../assets/accessible-components-assets/ticketmaster_ui.png";
-import mcDonaldsImage from "../assets/persona-storyboarding-assets/mcdonald_logo.png";
-import tonysImage from "../assets/responsive-redesign-assets/TonysLogo.png";
+import accessImage from "../assets/accessible-components-assets/accessible-mockup.png";
+import mcDonaldsImage from "../assets/persona-storyboarding-assets/persona-mockup.png";
+import tonysImage from "../assets/responsive-redesign-assets/mockup-tonys.png";
 
 const Homepage: React.FC = () => {
   // Add state for mobile menu
@@ -284,33 +284,44 @@ const Homepage: React.FC = () => {
           <section id="projects" className="project-section-outer">
             <div className="project-list">
               <h1>projects</h1>
-
               <FadeInSection delay={100}>
+                <ProjectCard
+                  title="Buy At Brown - A Marketplace for Brown Students (broken link)"
+                  text="A marketplace for Brown students to buy and sell items to each other. A marketplace for Brown students to buy and sell items to each other."
+                  image={accessImage}
+                  tags={["Full Stack", "React", "Firebase", "Hi"]}
+                  pageLink="/buyatbrown"
+                  imageOnRight={false}
+                />
+              </FadeInSection>
+              <FadeInSection delay={200}>
                 <ProjectCard
                   title="Accessible Accordion Component Case Study"
                   text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
                   image={accessImage}
                   tags={["UX", "Accessibility", "Case Study"]}
                   pageLink="/accessiblecomponentsproject"
+                  imageOnRight={true}
                 />
               </FadeInSection>
-              <FadeInSection delay={200}>
+              <FadeInSection delay={350}>
                 <ProjectCard
                   title="Understanding Users Through Personas and Storyboarding"
                   text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
                   image={mcDonaldsImage}
                   tags={["UX", "Accessibility", "Case Study"]}
                   pageLink="/personastoryboardingproject"
-                  imageOnRight={true}
+                  imageOnRight={false}
                 />
               </FadeInSection>
-              <FadeInSection delay={250}>
+              <FadeInSection delay={400}>
                 <ProjectCard
                   title="Tony's Big Cheese Pizza: Responsive Redesign Case Study"
                   text="Analyzed and redesigned accordion components from real apps to improve accessibility, usability, and user interaction across mouse, keyboard, and screen reader inputs."
                   image={tonysImage}
                   tags={["UX", "Accessibility", "Case Study"]}
                   pageLink="/responsiveredesign"
+                  imageOnRight={true}
                 />
               </FadeInSection>
             </div>
@@ -323,9 +334,7 @@ const Homepage: React.FC = () => {
               <div className="contact-pink-blur"></div>
               <h1>let's connect ^_^</h1>
               <div className="contact-text-card">
-                <p>
-                  You can connect with me on LinkedIn!
-                </p>
+                <p>You can connect with me on LinkedIn!</p>
                 <div className="contact-photo-links">
                   <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
                     <img
@@ -342,7 +351,7 @@ const Homepage: React.FC = () => {
                     />
                   </a>
                 </div>
-                  <p>Or send me a message with the form below.</p>
+                <p>Or send me a message with the form below.</p>
               </div>
               <hr className="contact-form-line" />
               <div className="contact-me-form">
@@ -393,6 +402,16 @@ const Homepage: React.FC = () => {
                 </form>
               </div>
               <div className="contact-blue-blur"></div>
+              <div className="contact-text-card">
+                <p>Grab a copy of my resume below!</p>
+              </div>
+
+              <iframe
+                src="https://docs.google.com/document/d/14h41qVO-wVSSqU4YHiKrvYf7izHn399zosXK9f0O5j8/preview"
+                width="100%"
+                height="600px"
+                style={{ border: 0, borderRadius: "25px", objectFit: "contain" }}
+              ></iframe>
             </div>
           </section>
         </FadeInSection>
