@@ -1,1 +1,582 @@
-<!DOCTYPE html><html><head><link href="https://fonts.googleapis.com/css?family=Clash+Grotesk&display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Satoshi&display=swap" rel="stylesheet" /><link href="./css/main.css" rel="stylesheet" /><title>Document</title></head><body><div class="v1_2"><div class="v1_5"></div><div class="v33_42"><div class="v25_37"></div><span class="v25_39">jacob solano</span><span class="v25_38">hi, i am </span><div class="v33_41"></div></div><div class="v33_43"><div class="v33_55"><span class="v22_15">I am a designer and developer, currently studying at Brown University.  </span></div><div class="v22_33"><span class="v22_29">about  </span><span class="v22_31">projects</span></div><div class="v18_12"></div></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jacob Solano's Personal Portfolio" />
+    <title>Jacob Solano | Portfolio</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/components/ProjectCard.css" />
+    <link
+      rel="preload"
+      href="fonts/ClashGrotesk-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="entire-homepage">
+      <svg aria-hidden="true">
+        <filter id="grainy">
+          <!-- {/* <feTurbulence type="turbulence" baseFrequency="0.6" /> */} -->
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.8"
+            numOctaves="4"
+            stitchTiles="stitch"
+          />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.3 0"
+          />
+        </filter>
+      </svg>
+      <svg
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        style="position: absolute; width: 0; height: 0"
+      >
+        <defs>
+          <filter id="radialBlur">
+            <!-- {/* Generate a turbulence pattern */} -->
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.8"
+              numOctaves="2"
+              result="noise"
+            />
+            <!-- {/* Apply a Gaussian blur to the noise */} -->
+            <feGaussianBlur
+              in="noise"
+              stdDeviation="150"
+              result="blurredNoise"
+            />
+            <!-- {/* Displace the original graphic using the blurred noise */} -->
+            <feDisplacementMap
+              in="SourceGraphic"
+              in2="blurredNoise"
+              scale="250"
+              xChannelSelector="R"
+              yChannelSelector="G"
+            />
+          </filter>
+        </defs>
+      </svg>
+      <main>
+        <section id="landing-page" class="landing-section-outer">
+          <div class="landing-section-inner">
+            <div class="gradient-bg" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur
+                      in="SourceGraphic"
+                      stdDeviation="10"
+                      result="blur"
+                    />
+                    <feColorMatrix
+                      in="blur"
+                      mode="matrix"
+                      values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                      result="goo"
+                    />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                  </filter>
+                </defs>
+              </svg>
+              <div class="gradient-container">
+                <div class="g1"></div>
+                <!-- {/* <div class="g2"></div> */} -->
+                <div class="g3"></div>
+                {/*
+                <div class="g4"></div>
+                */}
+                <div class="g5"></div>
+                <div class="g6"></div>
+                <div class="g7"></div>
+                <div class="interaction"></div>
+              </div>
+            </div>
+            <div class="landing-container">
+              <div class="landing-text">
+                <p>hi, i am</p>
+                <h1>
+                  <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
+                    jacob solano
+                    <img
+                      class="name-card-star"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADaklEQVR4nO2aX4hMcRTHz+7Kn0JCSWg9rL3n3Jnf75bV8uYRKZGWB4p4UKSERzVqw5wzu7Tl3+OuN/ukPPCEQnmgbEj5E0V5ovyPZVdnxpI0ZufO7P3due6nTk1zZ87vfM89v9+c+/sNQEpKSkpKSkpKhHS098w1xAMW+XXRSPr1Pfgf8P3cZEN8z5KM/mk8pNcg6Rjk3X+LL5leg2Qz2mSJH5ZPgDwCyDVDUjFUWFNO/C/zZTUkFUNyuVICDPIlSCIWe9otyfeKFUA8ksnkCZKGQT5dWfwvOwVJIghOzLIo78ebAIPy0fd7Z0NSsCQHq7j7JfP4ACSBLhhssSRPq02AQX6u34VGJ0DZUPXd/2lZ4vXQ6FiSa2ETYIivQuORa+7A4/MN8lKD+W1hxf+eCvlt6kt9Ou8SEY/OsVjIardmPNluiA9Z4pMW+YJBvmWIXxqU4VpF/+PXYbg0Bt/SMXVsjUFj0Zg0No2x7sIDkq1hFjJnhvwk6/OWuoi3xJu1O3MuqmrjkYAKm+qRgCH3YkInYajmBBjiT+6FhDPtKGuvAJS7roWENpS7tVeAL12NugZYTzbWnABFt6oM8Tf3osZnGmvdt9esl19lSd7FXjzyB+PzOpgIsu1iLcoL1yLLGvKrrMfLYCIJlvQuiOPCaJAfBN6xxRAFnsczdO8uNuJJruimC0R+wIFyzrl45POtrbmp4IbRJkN82NXPpEHu0xjANUafDJG/RidchgNfdkHD7/tRaDsIccMSn4gwAcchbhjiGxFOgesQJ7pgsEU7sAgT8HHlytwkiAtZ7RCjK/9SEry8gbhgqbAz6gRY4h0QFwzy2cgrAOUMxAVLcsdBBdyGONDW1jfFonyJPAEoX3TsOMz/5dHf/ZIFfr7TtX4wKHtCzWHit9aXvWrF1+HWgT1xaIAGqhcvFzOZnkVjPkpHaaGeLPvjUAH3qxD+LMDC2nK+9Jp+pooKuA+uMeM4Nyie6SH3+X5ueiV/Kxb2Tis+Yo9jYdXuE1xjK54Z8m2DPR3V+tVOz5Lc/KdvlMfgGouyv0xwb0rP7LUcaeea1Yf6KlNZ+8A9o00WpduSfP5Zlrox0p/NHplXrxHUl/ocO3ovTjuU7ljsBo3R2dY3M5M5Fkzkv7vUt46hm7ITNUZKSkpKSkpKCvwv/AAzUADzEN1SjgAAAABJRU5ErkJggg=="
+                      alt="Small Rotating Blue Star"
+                      style="width: 32px"
+                    />
+                  </a>
+                </h1>
+                <p>
+                  and I'm a full-stack SWE who builds reliable systems with
+                  precision, purpose, and a touch of childlike wonder
+                </p>
+                <div class="landing-contact-photo-links">
+                  <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
+                    <img
+                      src="images/homepage/linkedinlogo.svg"
+                      alt="LinkedIn's Logo in Blue"
+                      class="white-social-logo"
+                    />
+                  </a>
+                  <a href="https://github.com/jacobsolanobrown">
+                    <img
+                      src="images/homepage/githublogo.svg"
+                      alt="Github's Logo in Blue"
+                      class="white-social-logo"
+                    />
+                  </a>
+                </div>
+              </div>
+              <img
+                src="images/homepage/cat_duotone.png"
+                alt="A photo of my cat with a duotone black and white filter overlayed"
+                style="width: 300px; height: auto"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+          <div class="nav-box">
+            <a href="#landing-page">home</a>
+            <a href="#about-me">about</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+            <a
+              href="https://drive.google.com/file/d/14zOWKmzT6rTqo0ttAUXynNSlqtzINu7E/view?usp=sharing"
+            >
+              resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav">
+          <button
+            class="hamburger-button"
+            aria-label="Toggle navigation menu"
+            id="hamburger-toggle"
+          >
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+
+          <div class="accordion-menu">
+            <a href="#landing-page">home</a>
+            <a href="#about-me">about</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+            <a
+              href="https://drive.google.com/file/d/14zOWKmzT6rTqo0ttAUXynNSlqtzINu7E/view?usp=sharing"
+            >
+              resume
+            </a>
+          </div>
+        </div>
+
+        <!-- ABOUT ME -->
+        <section id="about-me" class="about-me-section">
+          <h1>about me</h1>
+          <div class="about-pink-blur"></div>
+          <div class="about-me-grid">
+            <div class="about-me-card">
+              <div class="about-me-text">
+                <p>
+                  Hello! My name is Jacob Solano and I am a student at Brown
+                  University pursuing a degree in Computer Science. I'm driven
+                  by curiosity and creativity, and I aspire to be in a career
+                  where I can solve real-world problems through clean,
+                  thoughtful engineering.
+                  <br />
+                  <br />
+                  I enjoy developing user-focused software, from intuitive
+                  front-end interfaces to efficient backend systems. With
+                  experience spanning full-stack web development, UI/UX design,
+                  data analysis, and system-level programming, I enjoy tackling
+                  diverse challenges that blend creativity and technical skill.
+                  <br />
+                  <br />
+                  Outside of code, I make music, play my Nintendo 3DS, color to
+                  unwind, and spend too much time thinking about my cat.
+                </p>
+              </div>
+              <img
+                src="images/homepage/mountain.jpeg"
+                alt="A photo of Mount Rainer covered in clouds."
+              />
+            </div>
+            <div class="about-blue-blur"></div>
+            <div class="experience-card">
+              <h3>Frontend Development</h3>
+              <p>
+                I have been UI/UX enthusiast for 2+ years crafting interactive
+                experiences using HTML, CSS, JavaScript, Typescript, & React. I
+                also have experience in using variaos styling frameworks such as
+                Tailwind CSS and Bootstrap.
+              </p>
+              <div class="tech-stack-logos">
+                <img
+                  src="images/homepage/techstack/html_logo.png"
+                  alt="HTML Logo"
+                  style="
+                    border-radius: 70px;
+                    width: 70px;
+                    height: 70px;
+                    object-fit: contain;
+                    padding: 5px;
+                  "
+                />
+                <img
+                  src="images/homepage/techstack/css_logo.png"
+                  alt="CSS Logo"
+                  style="
+                    border-radius: 70px;
+                    width: 70px;
+                    height: 70px;
+                    object-fit: contain;
+                    padding: 5px;
+                  "
+                />
+                <img
+                  src="images/homepage/techstack/square_js_logo.png"
+                  alt="JavaScript Logo"
+                  style="
+                    border-radius: 70px;
+                    width: 70px;
+                    height: 70px;
+                    object-fit: contain;
+                    padding: 5px;
+                  "
+                />
+                <img
+                  src="images/homepage/techstack/square_ts_logo.png"
+                  alt="Typescript Logo"
+                  style="
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 70px;
+                    object-fit: contain;
+                    padding: 5px;
+                  "
+                />
+
+                <img
+                  src="images/homepage/techstack/react_logo.png"
+                  alt="React Logo"
+                  style="
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 70px;
+                    object-fit: contain;
+                    padding: 5px;
+                  "
+                />
+              </div>
+            </div>
+            <div class="experience-card">
+              <h3>Backend Development</h3>
+              <p>
+                I have experience building scalable APIs and robust services
+                using Java, Python, SQL, NoSQL, and Firebase databases. I enjoy
+                collaborating with frontend teams to deliver seamless,
+                efficient, and responsive applications.
+              </p>
+              <div class="tech-stack-logos">
+                <img
+                  src="images/homepage/techstack/python_logo.png"
+                  alt="Python Logo"
+                  style="
+                    border-radius: 70px;
+                    width: 70px;
+                    height: 70px;
+                    padding: 5px;
+                  "
+                />
+                <img
+                  src="images/homepage/techstack/java_logo.png"
+                  alt="Java Logo"
+                  style="
+                    border-radius: 70px;
+                    width: 70px;
+                    height: 70px;
+                    padding: 5px;
+                  "
+                />
+                <img
+                  src="images/homepage/techstack/c_logo.png"
+                  alt="C Logo"
+                  style="
+                    border-radius: 70px;
+                    width: 70px;
+                    height: 70px;
+                    object-fit: contain;
+                    padding: 5px;
+                  "
+                />
+                <img
+                  src="images/homepage/techstack/sql_logo.png"
+                  alt="SQL Logo"
+                  style="
+                    border-radius: 70px;
+                    width: 70px;
+                    height: 70px;
+                    object-fit: contain;
+                    padding: 5px;
+                  "
+                />
+                <img
+                  src="images/homepage/techstack/git_logo.png"
+                  alt="Git Logo"
+                  style="
+                    border-radius: 70px;
+                    width: 70px;
+                    height: 70px;
+                    object-fit: contain;
+                    padding: 5px;
+                  "
+                />
+              </div>
+            </div>
+            <div class="about-blue-blur2"></div>
+          </div>
+        </section>
+
+        <section id="projects" class="project-section-outer">
+          <div class="project-list">
+            <h1>projects</h1>
+            <!-- PROJECT 1 -->
+            <div class="projects-grid">
+              <a href="pages/buyatbrown.html">
+                <div class="project-card">
+                  <div class="project-card-blue-blur"></div>
+                  <div class="project-card-blue-blur2"></div>
+                  <div class="project-card-image">
+                    <img
+                      src="images/buyatbrown-assets/buyatbrown-mockup.png"
+                      alt="Mockup of Buy At Brown Login Page"
+                    />
+                  </div>
+                  <div class="project-card-content">
+                    <h2 class="project-card-title">
+                      Buy At Brown - A Marketplace for Brown Students design
+                    </h2>
+                    <p class="project-card-text">
+                      A marketplace for Brown students to buy and sell items to
+                      each other.
+                    </p>
+                    <div class="project-card-tags">
+                      <span class="project-card-tag"> Full Stack </span>
+                      <span class="project-card-tag"> React </span>
+                      <span class="project-card-tag"> Firebase </span>
+                      <span class="project-card-tag"> Authentication </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <h1>case studies</h1>
+            <div class="projects-grid">
+              <!-- PROJECT 2-->
+              <a href="pages/tonys-redesign.html">
+                <div class="project-card">
+                  <div class="project-card-blue-blur"></div>
+                  <div class="project-card-blue-blur2"></div>
+                  <div class="project-card-image">
+                    <img
+                      src="images/responsive-redesign-assets/mockup-tonys.png"
+                      alt="Mockup of Tony's Big Cheese Pizza Redesign"
+                    />
+                  </div>
+                  <div class="project-card-content">
+                    <h2 class="project-card-title">
+                      Tony's Big Cheese Pizza: Responsive Redesign Case Study
+                    </h2>
+                    <p class="project-card-text">
+                      An overhaul of Tony’s Big Cheese Pizza’s website to
+                      streamline an accessible, and maintainable front-end that
+                      delivers a reliable, user-centered experience.
+                    </p>
+                    <div class="project-card-tags">
+                      <span class="project-card-tag"> UX/UI </span>
+                      <span class="project-card-tag"> Responsive Design </span>
+                      <span class="project-card-tag"> HTML/CSS </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- PROJECT 3-->
+              <a href="pages/persona.html">
+                <div class="project-card">
+                  <div class="project-card-blue-blur"></div>
+                  <div class="project-card-blue-blur2"></div>
+                  <div class="project-card-image">
+                    <img
+                      src="images/persona-storyboarding-assets/persona-mockup.png"
+                      alt="Mockup of Persona and Storyboarding Persona Storyboarding Activity"
+                    />
+                  </div>
+                  <div class="project-card-content">
+                    <h2 class="project-card-title">
+                      Understanding Users Through Personas and Storyboarding
+                    </h2>
+                    <p class="project-card-text">
+                      Conducted on-site observations and user interviews about
+                      an interface to develop targeted UX recommendations to
+                      create a more intuitive, accessible ordering experience.
+                    </p>
+                    <div class="project-card-tags">
+                      <span class="project-card-tag"> UX </span>
+                      <span class="project-card-tag"> Case Study </span>
+                      <span class="project-card-tag"> Personas </span>
+                      <span class="project-card-tag"> Storytelling </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- PROJECT 4-->
+              <a href="pages/accessible-components.html">
+                <div class="project-card">
+                  <div class="project-card-blue-blur"></div>
+                  <div class="project-card-blue-blur2"></div>
+                  <div class="project-card-image">
+                    <img
+                      src="images/accessible-components-assets/accessible-mockup.png"
+                      alt="Mockup of Accessible Components Case Study"
+                    />
+                  </div>
+                  <div class="project-card-content">
+                    <h2 class="project-card-title">
+                      Accessible Accordion Component Case Study
+                    </h2>
+                    <p class="project-card-text">
+                      Analyzed and redesigned accordion components from real
+                      apps to improve accessibility, usability, and user
+                      interaction across mouse, keyboard, and screen reader
+                      inputs.
+                    </p>
+                    <div class="project-card-tags">
+                      <span class="project-card-tag"> UX </span>
+                      <span class="project-card-tag"> Accessibility </span>
+                      <span class="project-card-tag"> Case Study </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+          <div class="contact-frame">
+            <div class="contact-pink-blur"></div>
+            <!-- TITLE -->
+            <h1>let's connect ^_^</h1>
+            <!-- CONTACT CARD -->
+            <div class="contact-text-card">
+              <p>You can connect with me on LinkedIn!</p>
+              <div class="contact-photo-links">
+                <a href="https://www.linkedin.com/in/jacob-solano-92587226b/">
+                  <img
+                    src="images/homepage/linkedinlogo.svg"
+                    alt="LinkedIn's Logo in Blue"
+                    class="white-social-logo"
+                  />
+                </a>
+                <a href="https://github.com/jacobsolanobrown">
+                  <img
+                    src="images/homepage/githublogo.svg"
+                    alt="Github's Logo in Blue"
+                    class="white-social-logo"
+                  />
+                </a>
+              </div>
+              <p>Or send me a message with the form below.</p>
+            </div>
+            <!--  LINE  -->
+            <hr class="contact-form-line" />
+            <!-- BEGIN FORM -->
+            <div class="contact-me-form">
+              <form class="my-form">
+                <input
+                  type="text"
+                  name="_honey"
+                  style="display: none"
+                  aria-hidden="true"
+                />
+                <input
+                  type="hidden"
+                  name="_captcha"
+                  value="false"
+                  aria-hidden="true"
+                />
+
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Portfolio Form Submission!"
+                />
+                <!-- NAME INPUT -->
+                <label for="name">Full Name*</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="Name"
+                  placeholder="Name"
+                  required
+                />
+                <!-- EMAIL INPUT -->
+                <label for="email">E-mail Address*</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="Email"
+                  placeholder="E-mail"
+                  required
+                />
+                <!-- MESSAFE INPUT -->
+                <label for="message">Message (Optional)</label>
+                <textarea
+                  id="message"
+                  name="Message"
+                  placeholder="Message"
+                ></textarea>
+                <button type="submit">submit</button>
+              </form>
+            </div>
+            <div class="contact-blue-blur"></div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <button id="back-to-top" class="footer-scroll-top">
+          take me back up!
+        </button>
+        <p class="footer-text">
+          designed and developed by yours truly &copy; jacob solano
+        </p>
+        <a
+          class="resume-link"
+          href="https://drive.google.com/file/d/14zOWKmzT6rTqo0ttAUXynNSlqtzINu7E/view?usp=sharing"
+        >
+          resume
+        </a>
+      </footer>
+    </div>
+
+    <script src="pages/script.js"></script>
+  </body>
+</html>
